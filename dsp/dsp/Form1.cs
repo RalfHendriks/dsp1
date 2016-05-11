@@ -18,6 +18,7 @@ namespace dsp
             FileReader reader = new FileReader();
             reader.readFile();
             InitializeComponent();
+            MainClass main = new MainClass();
         }
     }
 }
