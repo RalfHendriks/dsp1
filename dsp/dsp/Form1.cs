@@ -15,6 +15,8 @@ namespace dsp
     {
         public Form1()
         {
+            FileReader reader = new FileReader();
+            reader.readFile();
             InitializeComponent();
         }
     }
