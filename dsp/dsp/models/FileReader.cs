@@ -8,31 +8,35 @@ namespace dsp.models
 {
     class FileReader
     {
+        private List<string> nodeDefinitions = new List<string>();
+        private List<string> nodeConnections = new List<string>();
+
         public void readFile()
         {
-            int counter = 0;
             string line;
+
             List<string> allLines = new List<string>();
 
             // Read the file and display it line by line.
             System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\models\\circuit.txt");
             while ((line = file.ReadLine()) != null)
             {
-
                 // There is no need to parse a comment, so we filter those out.
                 if (!line.StartsWith("#"))
                 {
-                    Console.WriteLine(line);
-                    allLines.Add(line);
-                }
-                
+                   allLines.Add(line);
+                }              
                
             }
-
             file.Close();
 
-            // Suspend the screen.
-            Console.ReadLine();
+            fillNodeDefinitions(allLines.ToArray());
+
+        }
+
+        private void fillNodeDefinitions(string[] lines)
+        {
+
         }
     }
 }
