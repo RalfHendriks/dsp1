@@ -16,6 +16,7 @@ namespace dsp
         public Form1()
         {
             InitializeComponent();
+            MainClass main = new MainClass();
         }
     }
 }

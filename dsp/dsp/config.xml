@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <nodeTypes>
+    <Node>
+      <type>NAND</type>
+    </Node>
+    <Node>
+      <type>OR</type>
+    </Node>
+    <Node>
+      <type>XOR</type>
+    </Node>
+    <Node>
+      <type>AND</type>
+    </Node>
+    <Node>
+      <type>NOR</type>
+    </Node>
+    <Node>
+      <type>NOT</type>
+    </Node>
+    <Node>
+      <type>INPUT_HIGH</type>
+    </Node>
+    <Node>
+      <type>INPUT_LOW</type>
+    </Node>
+    <Node>
+      <type>PROBE</type>
+    </Node>
+  </nodeTypes>
+</config>
