@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace dsp.models
 {
     class FileReader
     {
-        private List<string> nodeDefinitions = new List<string>();
-        private List<string> nodeConnections = new List<string>();
+        private Dictionary<string, string> nodeDefinitions = new Dictionary<string, string>();
+        private Dictionary<string, string[]> nodeConnections = new Dictionary<string, string[]>();
 
-        public void readFile()
+
+        public void parseFile()
+        {
+            string[] parsedFile = parseComments();
+            fillDefinitionsAndConnections(parsedFile);
+        }
+
+        private string[] parseComments()
         {
             string line;
 
@@ -24,19 +32,78 @@ namespace dsp.models
                 // There is no need to parse a comment, so we filter those out.
                 if (!line.StartsWith("#"))
                 {
-                   allLines.Add(line);
-                }              
-               
+                    allLines.Add(line);
+                }
+
             }
             file.Close();
 
-            fillNodeDefinitions(allLines.ToArray());
-
+            return allLines.ToArray();
         }
 
-        private void fillNodeDefinitions(string[] lines)
+        private string[] parseComments(string fileName)
         {
+            string line;
 
+            List<string> allLines = new List<string>();
+
+            // Read the file and display it line by line.
+            System.IO.StreamReader file = new System.IO.StreamReader(fileName);
+            while ((line = file.ReadLine()) != null)
+            {
+                // There is no need to parse a comment, so we filter those out.
+                if (!line.StartsWith("#"))
+                {
+                    allLines.Add(line);
+                }
+
+            }
+            file.Close();
+
+            return allLines.ToArray();
+        }
+
+        private void fillDefinitionsAndConnections(string[] lines)
+        {
+            bool shouldFillConnections = true;
+            foreach (String line in lines)
+            {
+                // Line break specifies the end of the node definitions
+                if (String.IsNullOrWhiteSpace(line))
+                {
+                    shouldFillConnections = false;
+                    continue; // No need to parse the empty line.
+                }
+                if (shouldFillConnections)
+                {
+
+                    string[] splitLine = line.Split(':');
+
+                    // Trim the strings to remove excess whitespaces and tabs.
+                    string name = splitLine[0].Trim();
+                    string nodeType = splitLine[1].Trim();
+
+                    // Remove the ';' at the end
+                    nodeType = nodeType.Substring(0, nodeType.Length - 1);
+
+                    nodeDefinitions.Add(name, nodeType);
+                }
+                else
+                {
+                    string[] splitLine = line.Split(':');
+
+                    // Trim the strings to remove excess whitespaces and tabs.
+                    string name = splitLine[0].Trim();
+                    string rawString = splitLine[1].Trim();
+
+                    // Remove the ';' at the end
+                    rawString = rawString.Substring(0, rawString.Length - 1);
+
+                    string[] connectedNodes = rawString.Split(',');
+
+                    nodeConnections.Add(name, connectedNodes);
+                }
+            }
         }
     }
 }
