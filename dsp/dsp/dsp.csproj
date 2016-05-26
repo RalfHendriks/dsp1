@@ -59,6 +59,7 @@
     <Compile Include="models\Input_Low.cs" />
     <Compile Include="models\Nand.cs" />
     <Compile Include="models\Nor.cs" />
+    <Compile Include="models\FileReader.cs" />
     <Compile Include="models\Not.cs" />
     <Compile Include="models\Or.cs" />
     <Compile Include="models\Probe.cs" />
@@ -89,7 +90,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="models\circuit.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml">
