@@ -2,31 +2,31 @@
 <config>
   <nodeTypes>
     <Node>
-      <type>NAND</type>
+      <type>Nand</type>
     </Node>
     <Node>
-      <type>OR</type>
+      <type>Or</type>
     </Node>
     <Node>
-      <type>XOR</type>
+      <type>Xor</type>
     </Node>
     <Node>
-      <type>AND</type>
+      <type>And</type>
     </Node>
     <Node>
-      <type>NOR</type>
+      <type>Nor</type>
     </Node>
     <Node>
-      <type>NOT</type>
+      <type>Not</type>
     </Node>
     <Node>
-      <type>INPUT_HIGH</type>
+      <type>Input_High</type>
     </Node>
     <Node>
-      <type>INPUT_LOW</type>
+      <type>Input_Low</type>
     </Node>
     <Node>
-      <type>PROBE</type>
+      <type>Probe</type>
     </Node>
   </nodeTypes>
 </config>

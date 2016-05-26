@@ -8,6 +8,12 @@ namespace dsp.models
 {
     public interface INode
     {
+        String Name { get; set; }
+        int Value { get; set; }
+        INode[] ConnectedNodes { get; set; }
+
+        void register(NodeFactory factory);
+
         int calculate();
 
         int getValue();

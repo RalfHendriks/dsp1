@@ -52,9 +52,17 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="models\And.cs" />
     <Compile Include="models\baseModels\INode.cs" />
     <Compile Include="models\baseModels\NodeOperator.cs" />
+    <Compile Include="models\Input_High.cs" />
+    <Compile Include="models\Input_Low.cs" />
+    <Compile Include="models\Nand.cs" />
+    <Compile Include="models\Nor.cs" />
     <Compile Include="models\Not.cs" />
+    <Compile Include="models\Or.cs" />
+    <Compile Include="models\Probe.cs" />
+    <Compile Include="models\Xor.cs" />
     <Compile Include="NodeFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

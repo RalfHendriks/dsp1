@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace dsp.models
 {
-    public class Not : NodeOperator
+    public class Input_Low: NodeOperator
     {
+        
         public static void register(NodeFactory factory)
         {
         }
 
-        public Not(string name)
+        public Input_Low(string name)
         {
             this.setName(name);
         }

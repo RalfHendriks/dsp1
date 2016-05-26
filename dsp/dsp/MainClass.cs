@@ -15,20 +15,23 @@ namespace dsp
         NodeFactory Factory = new NodeFactory();
         public MainClass()
         {
-            loadConfig();
-            Not t = new Not("please");
-            MessageBox.Show(t.GetType().ToString());
+            init();
         }
 
-        private void loadConfig()
+        private void init()
         {
-            XmlDocument xdoc = new XmlDocument();
-            xdoc.Load(@"config.xml");
-            XmlNode xnodes = xdoc.SelectSingleNode("/config/nodeTypes");
-            foreach (XmlNode xnn in xnodes.ChildNodes)
+            //Code for loading all classes based on abstract class
+            //Assembly dll = Assembly.LoadFrom("Dsp.exe");
+            //var types = dll.GetTypes().Where(x => x.IsSubclassOf(typeof(INode)));
+
+            //Code for loading all classes bade on interface class
+            var type = typeof(INode);
+            var types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => type.IsAssignableFrom(p) && !p.IsInterface);
+            foreach (var item in types)
             {
-                //Factory.addNodeType()
-            }   
+                INode node = (INode)Activator.CreateInstance(item);
+                node.register(Factory);
+            }
         }
     }
 }

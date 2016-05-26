@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace dsp.models
 {
-    public class Not : NodeOperator
+    public class Xor: NodeOperator
     {
-        public static void register(NodeFactory factory)
-        {
-        }
-
-        public Not(string name)
+        public Xor(string name)
         {
             this.setName(name);
         }
-
         public override int calculate()
         {
             throw new NotImplementedException();
