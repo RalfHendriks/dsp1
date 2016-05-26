@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace dsp.models
 {
-    public abstract class NodeOperator: INode
+    public abstract class NodeOperator
     {
-        private string _name = "";
-        private int _value = 0;
-        private INode[] _connectedNodes;
+        protected string _name;
+        protected int _value = 0;
+        protected INode[] _connectedNodes;
 
         public abstract int calculate();
 

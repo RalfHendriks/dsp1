@@ -4,28 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using dsp.models;
+using System.Reflection;
 
 namespace dsp
 {
     public class NodeFactory
     {
-        private Dictionary<string, Type> _types;
+        private Dictionary<string, INode> _nodes;
 
         public NodeFactory()
         {
-            _types = new Dictionary<string, Type>();
+            _nodes = new Dictionary<string, INode>();
         }
 
-        public void addNodeType(string name, Type type)
+        public void addNodeType(string name, INode node)
         {
-            _types[name] = type;
+            _nodes[name] = node;
         }
 
         public INode CreateNode(string type)
         {
-            Type t = _types[type];
-            INode node = (INode)Activator.CreateInstance(t);
-            return node;
+            INode t = _nodes[type];
+            //INode node = (INode)Activator.CreateInstance(t);
+            return t;
         }
     }
 }
