@@ -15,11 +15,11 @@ namespace dsp.models
 
         public void parseFile()
         {
-            string[] parsedFile = parseComments();
+            string[] parsedFile = validate();
             fillDefinitionsAndConnections(parsedFile);
         }
 
-        private string[] parseComments()
+        private string[] validate()
         {
             string line;
 
@@ -32,6 +32,10 @@ namespace dsp.models
                 // There is no need to parse a comment, so we filter those out.
                 if (!line.StartsWith("#"))
                 {
+                    if (!String.IsNullOrWhiteSpace(line) && !line.EndsWith(";"))
+                    {
+                        throw new Exception("The document is not well-formed, please fix the errors and try again");
+                    }
                     allLines.Add(line);
                 }
 
@@ -41,7 +45,8 @@ namespace dsp.models
             return allLines.ToArray();
         }
 
-        private string[] parseComments(string fileName)
+        // Same method, but witha file as input
+        private string[] validate(string fileName)
         {
             string line;
 
@@ -49,13 +54,19 @@ namespace dsp.models
 
             // Read the file and display it line by line.
             System.IO.StreamReader file = new System.IO.StreamReader(fileName);
+            
             while ((line = file.ReadLine()) != null)
             {
                 // There is no need to parse a comment, so we filter those out.
                 if (!line.StartsWith("#"))
                 {
+                    if (!String.IsNullOrWhiteSpace(line) && !line.EndsWith(";"))
+                    {
+                        throw new Exception("The document is not well-formed, please fix the errors and try again");
+                    }
                     allLines.Add(line);
                 }
+               
 
             }
             file.Close();
@@ -68,12 +79,13 @@ namespace dsp.models
             bool shouldFillConnections = true;
             foreach (String line in lines)
             {
-                // Line break specifies the end of the node definitions
+                // Line break specifies the end of the node definitions.
                 if (String.IsNullOrWhiteSpace(line))
                 {
                     shouldFillConnections = false;
                     continue; // No need to parse the empty line.
                 }
+
                 if (shouldFillConnections)
                 {
 
