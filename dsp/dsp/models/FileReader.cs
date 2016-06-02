@@ -13,42 +13,20 @@ namespace dsp.models
         private Dictionary<string, string[]> nodeConnections = new Dictionary<string, string[]>();
 
 
-        public void parseFile()
+        public void parseFile(string fileName)
         {
-            string[] parsedFile = parseComments();
+            string[] parsedFile = parseComments(fileName);
             fillDefinitionsAndConnections(parsedFile);
         }
 
-        private string[] parseComments()
+        private string[] parseComments(string filePath)
         {
             string line;
 
             List<string> allLines = new List<string>();
 
             // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\models\\circuit.txt");
-            while ((line = file.ReadLine()) != null)
-            {
-                // There is no need to parse a comment, so we filter those out.
-                if (!line.StartsWith("#"))
-                {
-                    allLines.Add(line);
-                }
-
-            }
-            file.Close();
-
-            return allLines.ToArray();
-        }
-
-        private string[] parseComments(string fileName)
-        {
-            string line;
-
-            List<string> allLines = new List<string>();
-
-            // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader(fileName);
+            System.IO.StreamReader file = new System.IO.StreamReader(filePath);
             while ((line = file.ReadLine()) != null)
             {
                 // There is no need to parse a comment, so we filter those out.

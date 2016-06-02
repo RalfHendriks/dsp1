@@ -95,7 +95,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="models\circuit.txt" />
+    <Content Include="circuit.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml">

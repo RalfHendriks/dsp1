@@ -13,12 +13,16 @@ namespace dsp
 {
     public partial class Form1 : Form
     {
+        MainClass main;
         public Form1()
         {
-            FileReader reader = new FileReader();
-            reader.parseFile();
             InitializeComponent();
-            MainClass main = new MainClass();
+            main = new MainClass();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            main.openFile(ofdFileFinder);
         }
     }
 }
