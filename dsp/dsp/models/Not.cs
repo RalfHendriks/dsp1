@@ -3,21 +3,66 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace dsp.models
 {
-    public class Not : NodeOperator
+    public class Not : INode
     {
+
         public static void register(NodeFactory factory)
         {
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)Activator.CreateInstance(MethodBase.GetCurrentMethod().DeclaringType));
         }
 
-        public Not(string name)
+        public string Name
         {
-            this.setName(name);
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
         }
 
-        public override int calculate()
+        public int Value
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public INode[] ConnectedNodes
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int getValue()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getName()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public int calculate()
         {
             throw new NotImplementedException();
         }

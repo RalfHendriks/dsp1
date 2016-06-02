@@ -1,18 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace dsp.models
 {
-    public class Xor: NodeOperator
+    public class Xor : INode
     {
-        public Xor(string name)
+        public static void register(NodeFactory factory)
         {
-            this.setName(name);
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)Activator.CreateInstance(MethodBase.GetCurrentMethod().DeclaringType));
         }
-        public override int calculate()
+
+        public string Name
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int Value
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public INode[] ConnectedNodes
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public int calculate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getValue()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getName()
         {
             throw new NotImplementedException();
         }

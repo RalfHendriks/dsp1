@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace dsp.models
 {
     public class And: INode
     {
-
         public string Name
         {
             get
@@ -61,10 +61,9 @@ namespace dsp.models
             throw new NotImplementedException();
         }
 
-
-        public void register(NodeFactory factory)
+        public static void register(NodeFactory factory)
         {
-            throw new NotImplementedException();
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)new And());
         }
     }
 }
