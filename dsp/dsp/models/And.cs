@@ -13,29 +13,9 @@ namespace dsp.models
 
         private string[] kaas = {"kaas", "baab" } ;
 
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Name { get; set; }
 
-        public int Value
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Value { get; set; }
 
         public INode[] ConnectedNodes
         {

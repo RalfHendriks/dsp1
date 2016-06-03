@@ -19,6 +19,9 @@ namespace dsp
 
         public void addNodeType(string name, INode node)
         {
+            // This is a possible anti-pattern hotfix
+            name = name.ToUpper();
+
             _nodes[name] = node;
         }
 

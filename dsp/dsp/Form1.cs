@@ -22,7 +22,7 @@ namespace dsp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main.openFile(ofdFileFinder);
+            main.buildFromFile(ofdFileFinder);
         }
     }
 }

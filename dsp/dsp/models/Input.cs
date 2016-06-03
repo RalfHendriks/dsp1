@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reflection;
 
 namespace dsp.models
 {
-    public class Or : INode
+    public class Input: INode
     {
-
+        static string[] inputTypes = { "_HIGH", "_LOW" };
+        
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)Activator.CreateInstance(MethodBase.GetCurrentMethod().DeclaringType));
+            foreach (string type in inputTypes)
+            {
+                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, new Input());
+            }            
+        }
+
+        public int calculate()
+        {
+            throw new NotImplementedException();
         }
 
         public string Name { get; set; }
@@ -37,12 +46,6 @@ namespace dsp.models
         }
 
         public string getName()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public int calculate()
         {
             throw new NotImplementedException();
         }
