@@ -9,6 +9,8 @@ namespace dsp.models
 {
     public class And: INode
     {
+        public string[] _keywords = { "And" };
+
         public string Name
         {
             get
@@ -63,7 +65,7 @@ namespace dsp.models
 
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)new And());
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new And());
         }
     }
 }
