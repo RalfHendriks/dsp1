@@ -11,16 +11,19 @@ namespace dsp
     class CircuitBuilder
     {
         private NodeFactory factory;
-        private List<INode> nodes = new List<INode>();
+        public List<INode> nodes { get; private set; }
 
         public CircuitBuilder(NodeFactory factory)
-        {
+        {            
             this.factory = factory;
         }
 
         // Request the objects from the factory, based on the dictionary
-        public void buildNodes(Dictionary<String, String> nodeTypes)
+        public void buildNodes(Dictionary<string, string> nodeTypes, Dictionary<string, string[]> nodeConnections)
         {
+            nodes = new List<INode>();
+
+            // First iteration: request the objects from the factory
             foreach (KeyValuePair<string, string> entry in nodeTypes)
             {
                 /* Key is the Node name, value is the Node type */
@@ -28,6 +31,22 @@ namespace dsp
 
                 temp.Name = entry.Key;
                 nodes.Add(temp);
+            }
+
+            // Second iteration: after all the Nodes have been built, fill their ConnectedNodes arrays.
+            foreach (INode node in nodes)
+            {
+
+                // Get the nodes that are connected from the nodeConnections dictionary
+                string[] connectedStrings;
+                nodeConnections.TryGetValue(node.Name, out connectedStrings);
+                INode[] connectedNodes;
+
+                if (connectedStrings != null)
+                {
+                    connectedNodes = nodes.Where(n => connectedStrings.Contains(n.Name)).ToArray();
+                }               
+                
             }
         }
     }
