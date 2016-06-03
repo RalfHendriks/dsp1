@@ -55,7 +55,6 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="models\And.cs" />
     <Compile Include="models\baseModels\INode.cs" />
-    <Compile Include="models\baseModels\NodeOperator.cs" />
     <Compile Include="models\Input.cs" />
     <Compile Include="models\Nand.cs" />
     <Compile Include="models\Nor.cs" />

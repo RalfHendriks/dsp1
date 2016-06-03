@@ -27,7 +27,7 @@ namespace dsp
             if(result == DialogResult.OK)
             {
                 reader.parseFile(dialog.FileName);
-                builder.buildNodes(reader.nodeDefinitions);
+                builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
             }
         }
 
