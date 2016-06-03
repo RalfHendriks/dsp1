@@ -26,7 +26,7 @@ namespace dsp.models
             List<string> allLines = new List<string>();
 
             // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\models\\circuit.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader("circuit.txt");
             while ((line = file.ReadLine()) != null)
             {
                 // There is no need to parse a comment, so we filter those out.

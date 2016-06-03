@@ -9,6 +9,8 @@ namespace dsp.models
     public class And: INode
     {
 
+        private string[] kaas = {"kaas", "baab" } ;
+
         public string Name
         {
             get
