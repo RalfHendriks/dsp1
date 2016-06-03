@@ -11,6 +11,7 @@ namespace dsp
     class CircuitBuilder
     {
         private NodeFactory factory;
+        private List<INode> nodes = new List<INode>();
 
         public CircuitBuilder(NodeFactory factory)
         {
@@ -20,11 +21,11 @@ namespace dsp
         // Request the objects from the factory, based on the dictionary
         public void buildNodes(Dictionary<String, String> nodeTypes)
         {
-            List<INode> nodes = new List<INode>();
             foreach (KeyValuePair<string, string> entry in nodeTypes)
             {
-                Debug.WriteLine(entry.Value);
+                /* Key is the Node name, value is the Node type */
                 INode temp = factory.CreateNode(entry.Value);
+
                 temp.Name = entry.Key;
                 nodes.Add(temp);
             }
