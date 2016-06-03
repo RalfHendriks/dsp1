@@ -12,21 +12,22 @@ namespace dsp
 {
     public class MainClass
     {
-        NodeFactory Factory = new NodeFactory();
+        NodeFactory factory = new NodeFactory();
         FileReader reader = new FileReader();
+        CircuitBuilder builder;
         public MainClass()
-        {
+        {            
             init();
-
-            
+            builder = new CircuitBuilder(factory); // shut up C#
         }
 
-        public void openFile(FileDialog dialog)
+        public void buildFromFile(FileDialog dialog)
         {
             var result = dialog.ShowDialog();
             if(result == DialogResult.OK)
             {
                 reader.parseFile(dialog.FileName);
+                builder.buildNodes(reader.nodeDefinitions);
             }
         }
 
@@ -41,7 +42,7 @@ namespace dsp
             var types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => type.IsAssignableFrom(p) && !p.IsInterface);
             foreach (var item in types)
             {
-                item.GetMethod("register").Invoke(null, new NodeFactory[] {Factory});
+                item.GetMethod("register").Invoke(null, new NodeFactory[] {factory});
             }
         }
     }

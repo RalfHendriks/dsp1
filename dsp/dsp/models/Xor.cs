@@ -14,29 +14,9 @@ namespace dsp.models
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), (INode)Activator.CreateInstance(MethodBase.GetCurrentMethod().DeclaringType));
         }
 
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string Name { get; set; }
 
-        public int Value
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int Value { get; set; }
 
         public INode[] ConnectedNodes
         {

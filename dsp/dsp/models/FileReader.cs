@@ -9,8 +9,14 @@ namespace dsp.models
 {
     class FileReader
     {
-        private Dictionary<string, string> nodeDefinitions = new Dictionary<string, string>();
-        private Dictionary<string, string[]> nodeConnections = new Dictionary<string, string[]>();
+        public Dictionary<string, string> nodeDefinitions { get; set; }
+        public Dictionary<string, string[]> nodeConnections { get; set; }
+
+        public FileReader()
+        {
+            nodeConnections = new Dictionary<string, string[]>();
+            nodeDefinitions = new Dictionary<string, string>();
+        }
 
 
         public void parseFile(string fileName)
