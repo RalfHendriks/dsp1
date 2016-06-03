@@ -15,7 +15,7 @@ namespace dsp.models
         {
             foreach (string type in inputTypes)
             {
-                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, new Input());
+                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, MethodBase.GetCurrentMethod().DeclaringType);
             }            
         }
 

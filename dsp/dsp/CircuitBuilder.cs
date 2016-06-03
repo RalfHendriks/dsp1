@@ -44,7 +44,8 @@ namespace dsp
 
                 if (connectedStrings != null)
                 {
-                    connectedNodes = nodes.Where(n => connectedStrings.Contains(n.Name)).ToArray();
+                    var b = connectedStrings.Contains(node.Name);
+                    connectedNodes = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
                 }               
                 
             }

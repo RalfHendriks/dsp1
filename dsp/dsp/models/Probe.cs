@@ -11,7 +11,7 @@ namespace dsp.models
     {
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Probe());
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);
         }
 
         public string Name { get; set; }

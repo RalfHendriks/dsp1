@@ -10,14 +10,14 @@ namespace dsp
 {
     public class NodeFactory
     {
-        private Dictionary<string, INode> _nodes;
+        private Dictionary<string, Type> _nodes;
 
         public NodeFactory()
         {
-            _nodes = new Dictionary<string, INode>();
+            _nodes = new Dictionary<string, Type>();
         }
 
-        public void addNodeType(string name, INode node)
+        public void addNodeType(string name, Type node)
         {
             // This is a possible anti-pattern hotfix
             name = name.ToUpper();
@@ -27,9 +27,9 @@ namespace dsp
 
         public INode CreateNode(string type)
         {
-            INode t = _nodes[type];
-            //INode node = (INode)Activator.CreateInstance(t);
-            return t;
+            Type t = _nodes[type];
+            INode node = (INode)Activator.CreateInstance(t);
+            return node;
         }
     }
 }

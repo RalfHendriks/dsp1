@@ -37,7 +37,7 @@ namespace dsp.models
 
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new And());
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);
         }
     }
 }
