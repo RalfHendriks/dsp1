@@ -36,18 +36,20 @@ namespace dsp
             // Second iteration: after all the Nodes have been built, fill their ConnectedNodes arrays.
             foreach (INode node in nodes)
             {
-
                 // Get the nodes that are connected from the nodeConnections dictionary
                 string[] connectedStrings;
                 nodeConnections.TryGetValue(node.Name, out connectedStrings);
-                INode[] connectedNodes;
 
+                INode[] connectedNodes;
                 if (connectedStrings != null)
                 {
+                    // Fetch the node objects from nodes
                     var b = connectedStrings.Contains(node.Name);
                     connectedNodes = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
-                }               
-                
+                    
+                    // Set the ConnectedNodes property
+                    node.ConnectedNodes = connectedNodes;
+                }          
             }
         }
     }

@@ -12,9 +12,10 @@ namespace dsp
 {
     public class MainClass
     {
-        NodeFactory factory = new NodeFactory();
-        FileReader reader = new FileReader();
-        CircuitBuilder builder;
+        private NodeFactory factory = new NodeFactory();
+        private FileReader reader = new FileReader();
+        private CircuitBuilder builder;
+
         public MainClass()
         {            
             init();
