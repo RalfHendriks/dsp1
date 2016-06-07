@@ -11,31 +11,32 @@ namespace dsp.models
     {
         private List<int> inputValues = new List<int>();
 
+        public int NumberOfRequiredInputs { get; set; }
+
         public string Name { get; set; }
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
-        {
-            bool allValuesHigh = true;
-            inputValues.Add(input);
+        public int? calculate(int input)
+        {            
+            inputValues.Add(input);            
 
-            if (inputValues.Count == ConnectedNodes.Length)
+            if (inputValues.Count == NumberOfRequiredInputs)
             {
-                foreach (INode node in this.ConnectedNodes)
+                bool allValuesHigh = true;
+                foreach (int value in inputValues)
                 {
-                    if (node.Value == 0)
+                    if (value != 1)
                     {
                         allValuesHigh = false;
                         break;
                     }
-                }               
+                }
+                return allValuesHigh ? 1 : 0;
             }
-
-
-            return allValuesHigh ? 1 : 0;
+            return 0;
         }
 
         public static void register(NodeFactory factory)
@@ -46,6 +47,6 @@ namespace dsp.models
         public INode Clone()
         {
             return new And();
-        }
+        }      
     }
 }

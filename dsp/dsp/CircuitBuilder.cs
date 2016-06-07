@@ -40,15 +40,20 @@ namespace dsp
 //                                                                                    |
                 nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
-                INode[] connectedNodes;
+                INode[] connectedOutputs;
                 if (connectedStrings != null)
                 {
                     // Fetch the node objects from nodes
                     var b = connectedStrings.Contains(node.Name);
-                    connectedNodes = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
-                    
+                    connectedOutputs = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
+
+                    foreach (var output in connectedOutputs)
+                    {
+                        output.NumberOfRequiredInputs++;
+                    }
+
                     // Set the ConnectedNodes property
-                    node.ConnectedNodes = connectedNodes;
+                    node.ConnectedOutputs = connectedOutputs;
                 }          
             }
         }

@@ -19,6 +19,8 @@ namespace dsp
         public MainClass()
         {            
             init();
+            Nand nand = new Nand();
+            //nand.ConnectedNodes = []
             builder = new CircuitBuilder(factory); // shut up C#
         }
 

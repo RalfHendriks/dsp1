@@ -10,6 +10,7 @@ namespace dsp.models
     public class Xor : INode
     {
         private List<int> inputValues = new List<int>();
+        public int NumberOfRequiredInputs { get; set; }
 
         public static void register(NodeFactory factory)
         {
@@ -20,9 +21,9 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
+        public int? calculate(int input)
         {
             throw new NotImplementedException();
         }
@@ -31,5 +32,8 @@ namespace dsp.models
         {
             return new Xor();
         }
+
+
+       
     }
 }

@@ -10,6 +10,7 @@ namespace dsp.models
     public class Not : INode
     {
         private List<int> inputValues = new List<int>();
+        public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Not());
@@ -19,9 +20,9 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
+        public int? calculate(int input)
         {
             throw new NotImplementedException();
         }

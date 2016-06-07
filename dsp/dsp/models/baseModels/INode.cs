@@ -10,8 +10,9 @@ namespace dsp.models
     {
         String Name { get; set; }
         int Value { get; set; }
-        INode[] ConnectedNodes { get; set; }
+        INode[] ConnectedOutputs { get; set; }
         INode Clone();
-        int calculate(int input);
+        int? calculate(int input);
+        int NumberOfRequiredInputs { get; set; }
     }
 }
