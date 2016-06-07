@@ -24,15 +24,5 @@ namespace dsp.models
         {
             throw new NotImplementedException();
         }
-
-        public int getValue()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string getName()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

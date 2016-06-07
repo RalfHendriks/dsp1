@@ -20,16 +20,6 @@ namespace dsp.models
 
         public INode[] ConnectedNodes { get; set; }
 
-        public int getValue()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string getName()
-        {
-            throw new NotImplementedException();
-        }
-
 
         public int calculate()
         {

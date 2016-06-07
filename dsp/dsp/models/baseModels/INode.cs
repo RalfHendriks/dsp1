@@ -13,9 +13,5 @@ namespace dsp.models
         INode[] ConnectedNodes { get; set; }
 
         int calculate();
-
-        int getValue();
-
-        string getName();
     }
 }

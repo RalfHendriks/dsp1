@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace dsp.models
 {
-    public class Input: INode
+    public class Input : INode
     {
         static string[] inputTypes = { "_HIGH", "_LOW" };
-        
+
         public static void register(NodeFactory factory)
         {
             foreach (string type in inputTypes)
             {
                 factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, MethodBase.GetCurrentMethod().DeclaringType);
-            }            
+            }
         }
 
         public int calculate()
@@ -29,15 +29,5 @@ namespace dsp.models
         public int Value { get; set; }
 
         public INode[] ConnectedNodes { get; set; }
-
-        public int getValue()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string getName()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

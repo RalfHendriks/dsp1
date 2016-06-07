@@ -26,7 +26,7 @@ namespace dsp.models
         }
 
 
-        // Same method, but witha file as input
+        // Same method, but with a file as input
         private string[] validate(string fileName)
         {
             string line;
