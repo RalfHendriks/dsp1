@@ -23,9 +23,9 @@ namespace dsp.models
         public INode[] ConnectedOutputs { get; set; }
 
 
-        public int? calculate(int input)
+        public int? calculate(int _)
         {
-            throw new NotImplementedException();
+            return Value;
         }
 
         public INode Clone()

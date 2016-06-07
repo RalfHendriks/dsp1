@@ -25,7 +25,21 @@ namespace dsp.models
 
         public int? calculate(int input)
         {
-            throw new NotImplementedException();
+            inputValues.Add(input);
+
+            if (inputValues.Count == NumberOfRequiredInputs)
+            {
+                // In a NOR, all inputs must be 0 in order to return 'true'
+                foreach (int value in inputValues)
+                {
+                    if (value == 1)
+                    {
+                        return 0;
+                    }
+                }
+                return 1;
+            }
+            return null;
         }
 
         public INode Clone()

@@ -24,7 +24,11 @@ namespace dsp.models
 
         public int? calculate(int input)
         {
-            throw new NotImplementedException();
+            if (input == 1)
+            {
+                return 0;
+            }
+            return 1;               
         }
 
         public INode Clone()

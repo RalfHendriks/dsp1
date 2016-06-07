@@ -24,7 +24,21 @@ namespace dsp.models
 
         public int? calculate(int input)
         {
-            throw new NotImplementedException();
+            inputValues.Add(input);
+
+            if (inputValues.Count == NumberOfRequiredInputs)
+            {
+                foreach (int value in inputValues)
+                {
+                    if (input == 1)
+                    {
+                        return 1;
+                    }
+                }
+                return 0;
+
+            }
+            return null;
         }
 
         public INode Clone()

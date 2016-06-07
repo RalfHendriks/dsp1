@@ -25,7 +25,28 @@ namespace dsp.models
 
         public int? calculate(int input)
         {
-            throw new NotImplementedException();
+            inputValues.Add(input);
+
+            bool allFieldsHigh = true;
+            bool allFieldsLow = true;
+
+            if (inputValues.Count == NumberOfRequiredInputs)
+            {
+                // In a XOR, only one of 
+                foreach (int value in inputValues)
+                {
+                    if (value == 1)
+                    {
+                        allFieldsLow = false;
+                    }
+                    if (value == 0)
+                    {
+                        allFieldsHigh = false;
+                    }
+                }
+                return (allFieldsHigh || allFieldsLow) ? 0 : 1;
+            }
+            return null;
         }
 
         public INode Clone()
