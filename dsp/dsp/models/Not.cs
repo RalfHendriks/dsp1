@@ -9,7 +9,7 @@ namespace dsp.models
 {
     public class Not : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
@@ -22,13 +22,13 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? calculate(int input)
+        public int? tryCalculate(int input)
         {
             if (input == 1)
             {
                 return 0;
             }
-            return 1;               
+            return 1;         
         }
 
         public INode Clone()

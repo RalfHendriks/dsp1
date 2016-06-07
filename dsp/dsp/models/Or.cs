@@ -9,12 +9,14 @@ namespace dsp.models
 {
     public class Or : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Or());
         }
+
+
 
         public string Name { get; set; }
 
@@ -22,15 +24,13 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? calculate(int input)
+        public int? tryCalculate(int input)
         {
-            inputValues.Add(input);
-
-            if (inputValues.Count == NumberOfRequiredInputs)
+            if (InputValues.Count == NumberOfRequiredInputs)
             {
-                foreach (int value in inputValues)
+                foreach (int value in InputValues)
                 {
-                    if (input == 1)
+                    if (value == 1)
                     {
                         return 1;
                     }

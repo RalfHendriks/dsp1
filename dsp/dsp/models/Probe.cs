@@ -9,7 +9,7 @@ namespace dsp.models
 {
     public class Probe : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
@@ -23,9 +23,9 @@ namespace dsp.models
         public INode[] ConnectedOutputs { get; set; }
 
 
-        public int? calculate(int input)
+        public int? tryCalculate(int input)
         {
-            this.Value = input;
+            Value = input;
             return Value;
         }
 

@@ -29,7 +29,9 @@ namespace dsp
                 /* Key is the Node name, value is the Node type */
                 INode temp = factory.CreateNode(entry.Value);
 
+                // Set the name and initialize the InputValues property
                 temp.Name = entry.Key;
+                temp.InputValues = new List<int>();
                 nodes.Add(temp);
             }
 

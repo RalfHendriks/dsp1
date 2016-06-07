@@ -22,7 +22,7 @@ namespace dsp
             init();
             builder = new CircuitBuilder(factory); // shut up C#
         }
-
+        
         public void buildFromFile(FileDialog dialog)
         {
             var result = dialog.ShowDialog();

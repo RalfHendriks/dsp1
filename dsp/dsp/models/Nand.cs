@@ -9,7 +9,7 @@ namespace dsp.models
 {
     public class Nand : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
@@ -22,14 +22,12 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? calculate(int input)
+        public int? tryCalculate(int input)
         {
-            inputValues.Add(input);
-
-            if (inputValues.Count == NumberOfRequiredInputs)
+            if (InputValues.Count == NumberOfRequiredInputs)
             {
                 bool allValuesHigh = true;
-                foreach (int value in inputValues)
+                foreach (int value in InputValues)
                 {
                     if (value != 1)
                     {

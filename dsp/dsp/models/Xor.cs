@@ -9,7 +9,7 @@ namespace dsp.models
 {
     public class Xor : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
 
         public static void register(NodeFactory factory)
@@ -23,17 +23,15 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? calculate(int input)
+        public int? tryCalculate(int input)
         {
-            inputValues.Add(input);
-
             bool allFieldsHigh = true;
             bool allFieldsLow = true;
 
-            if (inputValues.Count == NumberOfRequiredInputs)
+            if (InputValues.Count == NumberOfRequiredInputs)
             {
                 // In a XOR, only one of 
-                foreach (int value in inputValues)
+                foreach (int value in InputValues)
                 {
                     if (value == 1)
                     {

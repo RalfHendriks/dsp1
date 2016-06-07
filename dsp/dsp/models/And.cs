@@ -9,7 +9,7 @@ namespace dsp.models
 {
     public class And: INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
 
         public int NumberOfRequiredInputs { get; set; }
 
@@ -19,14 +19,12 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? calculate(int input)
-        {            
-            inputValues.Add(input);            
-
-            if (inputValues.Count == NumberOfRequiredInputs)
+        public int? tryCalculate(int input)
+        {
+            if (InputValues.Count == NumberOfRequiredInputs)
             {
                 bool allValuesHigh = true;
-                foreach (int value in inputValues)
+                foreach (int value in InputValues)
                 {
                     if (value != 1)
                     {

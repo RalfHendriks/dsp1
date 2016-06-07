@@ -9,6 +9,7 @@ namespace dsp.models
 {
     public class Input : INode
     {
+        public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
@@ -20,7 +21,7 @@ namespace dsp.models
         {
             return new Input() { Value = this.Value };
         }
-        public int? calculate(int _)
+        public int? tryCalculate(int _)
         {
             return Value;
         }
