@@ -9,6 +9,7 @@ namespace dsp.models
 {
     public class Input : INode
     {
+        public string State { get; set; }
         static string[] inputTypes = { "_HIGH", "_LOW" };
 
         public static void register(NodeFactory factory)
@@ -18,6 +19,8 @@ namespace dsp.models
                 factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, MethodBase.GetCurrentMethod().DeclaringType);
             }
         }
+
+
 
         public int calculate()
         {

@@ -9,6 +9,7 @@ namespace dsp.models
 {
     public class Nor : INode
     {
+        public string State { get; set; }
 
         public static void register(NodeFactory factory)
         {

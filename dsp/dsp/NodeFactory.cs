@@ -19,7 +19,8 @@ namespace dsp
 
         public void addNodeType(string name, Type node)
         {
-            // This is a possible anti-pattern hotfix
+            // This is a possible anti-pattern hotfix. 
+            // It makes sure the Class names are compatible with the input file.
             name = name.ToUpper();
 
             _nodes[name] = node;
