@@ -12,8 +12,9 @@ namespace dsp
 {
     public class MainClass
     {
-        private NodeFactory factory = new NodeFactory();
         private FileReader reader = new FileReader();
+        private NodeFactory factory = new NodeFactory();
+        private CircuitSimulator simulator = new CircuitSimulator();
         private CircuitBuilder builder;
 
         public MainClass()
@@ -29,8 +30,13 @@ namespace dsp
             {
                 reader.parseFile(dialog.FileName);
                 builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
+                // After the nodes have been built, pass the nodes to the simulator.
+                simulator.Nodes = builder.Nodes;
+                simulator.simulate();
             }
         }
+
+        
 
         private void init()
         {

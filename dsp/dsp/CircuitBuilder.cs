@@ -9,8 +9,9 @@ namespace dsp
 {
     class CircuitBuilder
     {
-        private NodeFactory factory;
-        public List<INode> nodes { get; private set; }
+        public INode[] Nodes { get; private set; }
+
+        private NodeFactory factory;   
 
         public CircuitBuilder(NodeFactory factory)
         {            
@@ -20,7 +21,7 @@ namespace dsp
         // Request the objects from the factory, based on the dictionary
         public void buildNodes(Dictionary<string, string> nodeTypes, Dictionary<string, string[]> nodeConnections)
         {
-            nodes = new List<INode>();
+            List<INode> nodes = new List<INode>();
 
             // First iteration: request the objects from the factory
             foreach (KeyValuePair<string, string> entry in nodeTypes)
@@ -37,7 +38,7 @@ namespace dsp
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
                 string[] connectedStrings;// <----------------------------------------┐
-//                                                                                    |
+                                                             //                       |
                 nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
                 INode[] connectedOutputs;
@@ -56,6 +57,8 @@ namespace dsp
                     node.ConnectedOutputs = connectedOutputs;
                 }          
             }
+            // Expose the local List of INodes as a safe, unsettable Array of INodes.
+            Nodes = nodes.ToArray();
         }
     }
 }

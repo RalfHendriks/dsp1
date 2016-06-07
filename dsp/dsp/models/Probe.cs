@@ -23,8 +23,9 @@ namespace dsp.models
         public INode[] ConnectedOutputs { get; set; }
 
 
-        public int? calculate(int _)
+        public int? calculate(int input)
         {
+            this.Value = input;
             return Value;
         }
 
