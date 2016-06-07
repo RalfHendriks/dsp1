@@ -9,6 +9,8 @@ namespace dsp.models
 {
     public class Xor : INode
     {
+        private List<int> inputValues = new List<int>();
+
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Xor());
@@ -20,7 +22,7 @@ namespace dsp.models
 
         public INode[] ConnectedNodes { get; set; }
 
-        public int calculate()
+        public int calculate(int input)
         {
             throw new NotImplementedException();
         }

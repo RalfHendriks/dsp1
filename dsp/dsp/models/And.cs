@@ -9,9 +9,7 @@ namespace dsp.models
 {
     public class And: INode
     {
-        public string[] _keywords = { "And" };
-
-        private string[] kaas = {"kaas", "baab" } ;
+        private List<int> inputValues = new List<int>();
 
         public string Name { get; set; }
 
@@ -19,9 +17,25 @@ namespace dsp.models
 
         public INode[] ConnectedNodes { get; set; }
 
-        public int calculate()
+        public int calculate(int input)
         {
-            throw new NotImplementedException();
+            bool allValuesHigh = true;
+            inputValues.Add(input);
+
+            if (inputValues.Count == ConnectedNodes.Length)
+            {
+                foreach (INode node in this.ConnectedNodes)
+                {
+                    if (node.Value == 0)
+                    {
+                        allValuesHigh = false;
+                        break;
+                    }
+                }               
+            }
+
+
+            return allValuesHigh ? 1 : 0;
         }
 
         public static void register(NodeFactory factory)

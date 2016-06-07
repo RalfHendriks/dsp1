@@ -19,9 +19,9 @@ namespace dsp.models
         {
             return new Input() { Value = this.Value };
         }
-        public int calculate()
+        public int calculate(int _)
         {
-            throw new NotImplementedException();
+            return Value;
         }
 
         public string Name { get; set; }

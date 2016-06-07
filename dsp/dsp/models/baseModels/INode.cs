@@ -12,6 +12,6 @@ namespace dsp.models
         int Value { get; set; }
         INode[] ConnectedNodes { get; set; }
         INode Clone();
-        int calculate();
+        int calculate(int input);
     }
 }
