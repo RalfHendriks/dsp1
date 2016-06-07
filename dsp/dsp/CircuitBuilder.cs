@@ -37,7 +37,6 @@ namespace dsp
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
                 string[] connectedStrings;// <----------------------------------------┐
-//                                                                                    |
                 nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
                 INode[] connectedNodes;

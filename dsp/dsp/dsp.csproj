@@ -56,6 +56,9 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="models\And.cs" />
     <Compile Include="models\baseModels\INode.cs" />
+    <Compile Include="models\baseModels\NodeObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="models\Input.cs" />
     <Compile Include="models\Nand.cs" />
     <Compile Include="models\Nor.cs" />
@@ -96,6 +99,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="circuit.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\and.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\nand.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\nor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\not.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\or.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\xnor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\xor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
