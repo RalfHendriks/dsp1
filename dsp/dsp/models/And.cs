@@ -28,5 +28,18 @@ namespace dsp.models
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);
         }
+
+
+        public string State
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

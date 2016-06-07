@@ -10,6 +10,8 @@ namespace dsp.models
     public class Not : INode
     {
 
+        public string State { get; set; }
+
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);

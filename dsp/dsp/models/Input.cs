@@ -9,13 +9,14 @@ namespace dsp.models
 {
     public class Input : INode
     {
+        public int State { get; set; }
         static string[] inputTypes = { "_HIGH", "_LOW" };
 
         public static void register(NodeFactory factory)
         {
             foreach (string type in inputTypes)
             {
-                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, MethodBase.GetCurrentMethod().DeclaringType);
+                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, new Input() { State = type });
             }
         }
 
