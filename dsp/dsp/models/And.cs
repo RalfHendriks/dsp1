@@ -26,20 +26,12 @@ namespace dsp.models
 
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(),new And());
         }
 
-
-        public string State
+        public INode Clone()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            return new And();
         }
     }
 }

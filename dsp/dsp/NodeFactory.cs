@@ -28,11 +28,7 @@ namespace dsp
 
         public INode CreateNode(string type)
         {
-            INode t = _nodes[type];
-            INode node = Activator.CreateInstance(t);
-            return node;
-
-            //return _nodes[type].Clone();
+            return _nodes[type].Clone();
         }
     }
 }

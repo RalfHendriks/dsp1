@@ -9,10 +9,9 @@ namespace dsp.models
 {
     public class Probe : INode
     {
-        public string State { get; set; }
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), MethodBase.GetCurrentMethod().DeclaringType);
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Probe());
         }
 
         public string Name { get; set; }
@@ -25,6 +24,11 @@ namespace dsp.models
         public int calculate()
         {
             throw new NotImplementedException();
+        }
+
+        public INode Clone()
+        {
+            return new Probe();
         }
     }
 }

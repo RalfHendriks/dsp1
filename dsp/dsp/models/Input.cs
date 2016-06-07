@@ -9,17 +9,16 @@ namespace dsp.models
 {
     public class Input : INode
     {
-        public int State { get; set; }
-        static string[] inputTypes = { "_HIGH", "_LOW" };
-
         public static void register(NodeFactory factory)
         {
-            foreach (string type in inputTypes)
-            {
-                factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString() + type, new Input() { State = type });
-            }
+            factory.addNodeType("INPUT_HIGH", new Input() { Value = 1 });
+            factory.addNodeType("INPUT_LOW", new Input() { Value = 0 });
         }
 
+        public INode Clone()
+        {
+            return new Input() { Value = this.Value };
+        }
         public int calculate()
         {
             throw new NotImplementedException();
@@ -30,5 +29,6 @@ namespace dsp.models
         public int Value { get; set; }
 
         public INode[] ConnectedNodes { get; set; }
+
     }
 }
