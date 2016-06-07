@@ -1,7 +1,6 @@
 ﻿using dsp.models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,8 +36,9 @@ namespace dsp
             foreach (INode node in nodes)
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
-                string[] connectedStrings;
-                nodeConnections.TryGetValue(node.Name, out connectedStrings);
+                string[] connectedStrings;// <----------------------------------------┐
+//                                                                                    |
+                nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
                 INode[] connectedNodes;
                 if (connectedStrings != null)
