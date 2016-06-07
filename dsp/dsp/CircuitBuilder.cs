@@ -29,12 +29,6 @@ namespace dsp
                 INode temp = factory.CreateNode(entry.Value);
 
                 temp.Name = entry.Key;
-
-                if (temp.GetType() == typeof(Input))
-                {
-                    string state = entry.Value.Split('_')[1];
-                  
-                }
                 nodes.Add(temp);
             }
 
