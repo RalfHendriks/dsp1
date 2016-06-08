@@ -9,7 +9,8 @@ namespace dsp.models
 {
     public class Nand : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
+        public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Nand());
@@ -19,11 +20,29 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
+        public int? tryCalculate()
         {
-            throw new NotImplementedException();
+            if (NumberOfRequiredInputs < 2)
+            {
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
+            if (InputValues.Count == NumberOfRequiredInputs)
+            {
+                bool allValuesHigh = true;
+                foreach (int value in InputValues)
+                {
+                    if (value != 1)
+                    {
+                        allValuesHigh = false;
+                        break;
+                    }
+                }
+                Value = allValuesHigh ? 0 : 1;
+                return Value;
+            }
+            return null;
         }
 
         public INode Clone()

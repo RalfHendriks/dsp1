@@ -9,6 +9,8 @@ namespace dsp.models
 {
     public class Input : INode
     {
+        public List<int> InputValues { get; set; }
+        public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType("INPUT_HIGH", new Input() { Value = 1 });
@@ -19,7 +21,7 @@ namespace dsp.models
         {
             return new Input() { Value = this.Value };
         }
-        public int calculate(int _)
+        public int? tryCalculate()
         {
             return Value;
         }
@@ -28,7 +30,7 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
     }
 }

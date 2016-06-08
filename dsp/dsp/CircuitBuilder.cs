@@ -9,8 +9,9 @@ namespace dsp
 {
     class CircuitBuilder
     {
-        private NodeFactory factory;
-        public List<INode> nodes { get; private set; }
+        public INode[] Nodes { get; private set; }
+
+        private NodeFactory factory;   
 
         public CircuitBuilder(NodeFactory factory)
         {            
@@ -20,7 +21,7 @@ namespace dsp
         // Request the objects from the factory, based on the dictionary
         public void buildNodes(Dictionary<string, string> nodeTypes, Dictionary<string, string[]> nodeConnections)
         {
-            nodes = new List<INode>();
+            List<INode> nodes = new List<INode>();
 
             // First iteration: request the objects from the factory
             foreach (KeyValuePair<string, string> entry in nodeTypes)
@@ -28,7 +29,9 @@ namespace dsp
                 /* Key is the Node name, value is the Node type */
                 INode temp = factory.CreateNode(entry.Value);
 
+                // Set the name and initialize the InputValues property
                 temp.Name = entry.Key;
+                temp.InputValues = new List<int>();
                 nodes.Add(temp);
             }
 
@@ -37,20 +40,27 @@ namespace dsp
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
                 string[] connectedStrings;// <----------------------------------------┐
-//                                                                                    |
+                                                             //                       |
                 nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
-                INode[] connectedNodes;
+                INode[] connectedOutputs;
                 if (connectedStrings != null)
                 {
                     // Fetch the node objects from nodes
                     var b = connectedStrings.Contains(node.Name);
-                    connectedNodes = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
-                    
+                    connectedOutputs = nodes.Where(x => connectedStrings.Contains(x.Name)).ToArray();
+
+                    foreach (var output in connectedOutputs)
+                    {
+                        output.NumberOfRequiredInputs++;
+                    }
+
                     // Set the ConnectedNodes property
-                    node.ConnectedNodes = connectedNodes;
+                    node.ConnectedOutputs = connectedOutputs;
                 }          
             }
+            // Expose the local List of INodes as a safe, unsettable Array of INodes.
+            Nodes = nodes.ToArray();
         }
     }
 }
