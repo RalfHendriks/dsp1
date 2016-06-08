@@ -23,10 +23,15 @@ namespace dsp.models
         public INode[] ConnectedOutputs { get; set; }
 
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
-            Value = input;
-            return Value;
+            // Probe can only have one input value, and doesn't need to calculate anything.
+            if (InputValues.Count > 0)
+            {
+                Value = InputValues.ElementAt(0);
+                return Value;
+            }
+            return null;
         }
 
         public INode Clone()

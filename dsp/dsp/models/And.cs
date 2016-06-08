@@ -19,8 +19,13 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
+            // An AND gate has a minimum required inputs of 2;
+            if (NumberOfRequiredInputs < 2)
+            {
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
             if (InputValues.Count == NumberOfRequiredInputs)
             {
                 bool allValuesHigh = true;
@@ -32,9 +37,10 @@ namespace dsp.models
                         break;
                     }
                 }
-                return allValuesHigh ? 1 : 0;
+                Value = allValuesHigh ? 1 : 0;
+                return Value;
             }
-            return 0;
+            return null;
         }
 
         public static void register(NodeFactory factory)

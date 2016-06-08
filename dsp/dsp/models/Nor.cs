@@ -23,8 +23,12 @@ namespace dsp.models
         public INode[] ConnectedOutputs { get; set; }
 
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
+            if (NumberOfRequiredInputs < 2)
+            {
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
             if (InputValues.Count == NumberOfRequiredInputs)
             {
                 // In a NOR, all inputs must be 0 in order to return 'true'
@@ -32,10 +36,12 @@ namespace dsp.models
                 {
                     if (value == 1)
                     {
-                        return 0;
+                        Value = 0;
+                        return Value;
                     }
                 }
-                return 1;
+                Value = 1;
+                return Value;
             }
             return null;
         }

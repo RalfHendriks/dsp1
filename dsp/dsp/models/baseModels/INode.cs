@@ -12,7 +12,7 @@ namespace dsp.models
         int Value { get; set; }
         INode[] ConnectedOutputs { get; set; }
         INode Clone();
-        int? tryCalculate(int input);
+        int? tryCalculate();
         List<int> InputValues { get; set; }
         int NumberOfRequiredInputs { get; set; }
     }

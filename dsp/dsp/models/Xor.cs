@@ -23,14 +23,18 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
             bool allFieldsHigh = true;
             bool allFieldsLow = true;
 
             if (InputValues.Count == NumberOfRequiredInputs)
             {
-                // In a XOR, only one of 
+                if (NumberOfRequiredInputs < 2)
+                {
+                    throw new Exception("Not all pins have been connected, please check your file and try again");
+                }
+                // In a XOR, only one of the inputValues must be 1
                 foreach (int value in InputValues)
                 {
                     if (value == 1)
@@ -41,8 +45,9 @@ namespace dsp.models
                     {
                         allFieldsHigh = false;
                     }
-                }
-                return (allFieldsHigh || allFieldsLow) ? 0 : 1;
+                }                
+                Value = (allFieldsHigh || allFieldsLow) ? 0 : 1;
+                return Value;
             }
             return null;
         }

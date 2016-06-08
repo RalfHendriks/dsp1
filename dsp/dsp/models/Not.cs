@@ -22,13 +22,16 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
-            if (input == 1)
+            // A not can only have one input value, so its safe to get only the first one
+            if (InputValues.ElementAt(0) == 1)
             {
-                return 0;
+                Value = 0;
+                return Value;
             }
-            return 1;         
+            Value = 1;
+            return Value;         
         }
 
         public INode Clone()

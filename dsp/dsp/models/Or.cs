@@ -16,26 +16,30 @@ namespace dsp.models
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Or());
         }
 
-
-
         public string Name { get; set; }
 
         public int Value { get; set; }
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
+            if (NumberOfRequiredInputs < 2)
+            {
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
             if (InputValues.Count == NumberOfRequiredInputs)
             {
                 foreach (int value in InputValues)
                 {
                     if (value == 1)
                     {
-                        return 1;
+                        Value = 1;
+                        return Value;
                     }
                 }
-                return 0;
+                Value = 0;
+                return Value;
 
             }
             return null;

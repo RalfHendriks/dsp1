@@ -22,8 +22,12 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
-        public int? tryCalculate(int input)
+        public int? tryCalculate()
         {
+            if (NumberOfRequiredInputs < 2)
+            {
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
             if (InputValues.Count == NumberOfRequiredInputs)
             {
                 bool allValuesHigh = true;
@@ -35,7 +39,8 @@ namespace dsp.models
                         break;
                     }
                 }
-                return allValuesHigh ? 0 : 1;
+                Value = allValuesHigh ? 0 : 1;
+                return Value;
             }
             return null;
         }

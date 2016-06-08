@@ -21,7 +21,7 @@ namespace dsp.models
         {
             return new Input() { Value = this.Value };
         }
-        public int? tryCalculate(int _)
+        public int? tryCalculate()
         {
             return Value;
         }
