@@ -56,6 +56,9 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="models\And.cs" />
     <Compile Include="models\baseModels\INode.cs" />
+    <Compile Include="models\baseModels\NodeInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="models\baseModels\NodeObject.cs">
       <SubType>Component</SubType>
     </Compile>

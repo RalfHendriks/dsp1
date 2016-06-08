@@ -41,7 +41,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(852, 462);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1175, 629);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 0;
@@ -51,15 +52,20 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1037, 327);
+            this.panel1.Size = new System.Drawing.Size(1295, 481);
             this.panel1.TabIndex = 1;
             // 
             // lbSin
             // 
+            this.lbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbSin.AutoSize = true;
-            this.lbSin.Location = new System.Drawing.Point(22, 350);
+            this.lbSin.Location = new System.Drawing.Point(22, 504);
             this.lbSin.Name = "lbSin";
             this.lbSin.Size = new System.Drawing.Size(22, 13);
             this.lbSin.TabIndex = 2;
@@ -67,8 +73,9 @@
             // 
             // lbA
             // 
+            this.lbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbA.AutoSize = true;
-            this.lbA.Location = new System.Drawing.Point(22, 380);
+            this.lbA.Location = new System.Drawing.Point(22, 534);
             this.lbA.Name = "lbA";
             this.lbA.Size = new System.Drawing.Size(14, 13);
             this.lbA.TabIndex = 3;
@@ -76,8 +83,9 @@
             // 
             // lbB
             // 
+            this.lbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbB.AutoSize = true;
-            this.lbB.Location = new System.Drawing.Point(22, 410);
+            this.lbB.Location = new System.Drawing.Point(22, 564);
             this.lbB.Name = "lbB";
             this.lbB.Size = new System.Drawing.Size(14, 13);
             this.lbB.TabIndex = 4;
@@ -85,8 +93,9 @@
             // 
             // cbSin
             // 
+            this.cbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbSin.AutoSize = true;
-            this.cbSin.Location = new System.Drawing.Point(70, 350);
+            this.cbSin.Location = new System.Drawing.Point(70, 504);
             this.cbSin.Name = "cbSin";
             this.cbSin.Size = new System.Drawing.Size(15, 14);
             this.cbSin.TabIndex = 5;
@@ -94,8 +103,9 @@
             // 
             // cbA
             // 
+            this.cbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbA.AutoSize = true;
-            this.cbA.Location = new System.Drawing.Point(70, 380);
+            this.cbA.Location = new System.Drawing.Point(70, 534);
             this.cbA.Name = "cbA";
             this.cbA.Size = new System.Drawing.Size(15, 14);
             this.cbA.TabIndex = 6;
@@ -103,8 +113,9 @@
             // 
             // cbB
             // 
+            this.cbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbB.AutoSize = true;
-            this.cbB.Location = new System.Drawing.Point(70, 410);
+            this.cbB.Location = new System.Drawing.Point(70, 564);
             this.cbB.Name = "cbB";
             this.cbB.Size = new System.Drawing.Size(15, 14);
             this.cbB.TabIndex = 7;
@@ -114,7 +125,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 510);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1319, 664);
             this.Controls.Add(this.cbB);
             this.Controls.Add(this.cbA);
             this.Controls.Add(this.cbSin);
@@ -124,7 +136,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Binary calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
