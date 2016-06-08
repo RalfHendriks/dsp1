@@ -30,10 +30,15 @@ namespace dsp
             {
                 reader.parseFile(dialog.FileName);
                 builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
+
                 // After the nodes have been built, pass the nodes to the simulator.
                 simulator.Nodes = builder.Nodes;
-                simulator.simulate();
             }
+        }
+
+        public void simulate()
+        {
+            simulator.simulate();
         }
 
         

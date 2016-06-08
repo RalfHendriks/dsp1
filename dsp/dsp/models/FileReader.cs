@@ -12,12 +12,6 @@ namespace dsp.models
         public Dictionary<string, string> nodeDefinitions { get; set; }
         public Dictionary<string, string[]> nodeConnections { get; set; }
 
-        public FileReader()
-        {
-            nodeConnections = new Dictionary<string, string[]>();
-            nodeDefinitions = new Dictionary<string, string>();
-        }
-
 
         public void parseFile(string fileName)
         {
@@ -46,8 +40,6 @@ namespace dsp.models
                     }
                     allLines.Add(line);
                 }
-               
-
             }
             file.Close();
 
@@ -56,6 +48,10 @@ namespace dsp.models
 
         private void fillDefinitionsAndConnections(string[] lines)
         {
+            // Re-initialize the list to prevent collisions from previous files.
+            nodeConnections = new Dictionary<string, string[]>();
+            nodeDefinitions = new Dictionary<string, string>();
+
             bool shouldFillConnections = true;
             foreach (String line in lines)
             {
