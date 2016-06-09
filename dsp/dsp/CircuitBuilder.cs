@@ -1,21 +1,24 @@
 ﻿using dsp.models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace dsp
 {
     class CircuitBuilder
     {
+        private NodeFactory factory;
+        private Panel parent;
         public INode[] Nodes { get; private set; }
 
-        private NodeFactory factory;   
-
-        public CircuitBuilder(NodeFactory factory)
+        public CircuitBuilder(NodeFactory factory,Panel panel)
         {            
             this.factory = factory;
+            this.parent = panel;
         }
 
         // Request the objects from the factory, based on the dictionary
@@ -36,11 +39,12 @@ namespace dsp
             }
 
             // Second iteration: after all the Nodes have been built, fill their ConnectedNodes arrays.
+            int rowCountX = 0;
+            int rowCountY = 0;
             foreach (INode node in nodes)
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
                 string[] connectedStrings;// <----------------------------------------┐
-                                                             //                       |
                 nodeConnections.TryGetValue(node.Name, out connectedStrings); //------┘
 
                 INode[] connectedOutputs;
@@ -54,10 +58,18 @@ namespace dsp
                     {
                         output.NumberOfRequiredInputs++;
                     }
-
                     // Set the ConnectedNodes property
-                    node.ConnectedOutputs = connectedOutputs;
-                }          
+                   node.ConnectedOutputs = connectedOutputs;
+                }
+
+                INode[] confirmedOutputs = nodes.Where(y => y.ConnectedOutputs != null).ToArray();
+                var previousNodes = confirmedOutputs.Where(c => c.ConnectedOutputs.Contains(node));
+
+                node.generateVisual();
+                node.VisualObject.Location = new Point(rowCountX * 100, rowCountY * 100);
+                node.VisualObject.Parent = parent;
+                node.VisualObject.Show();
+                rowCountY++;
             }
             // Expose the local List of INodes as a safe, unsettable Array of INodes.
             Nodes = nodes.ToArray();

@@ -17,6 +17,8 @@ namespace dsp.models
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Xor());
         }
 
+        public IPanel VisualObject { get; set; }
+
         public string Name { get; set; }
 
         public int Value { get; set; }
@@ -57,7 +59,9 @@ namespace dsp.models
             return new Xor();
         }
 
-
-       
+        public void generateVisual()
+        {
+            VisualObject = new NodePanel(this.Name, MethodBase.GetCurrentMethod().DeclaringType.Name.ToString());
+        }
     }
 }

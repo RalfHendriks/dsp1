@@ -32,5 +32,11 @@ namespace dsp.models
 
         public INode[] ConnectedOutputs { get; set; }
 
+        public void generateVisual()
+        {
+            VisualObject = new InputPanel(this.Name);
+        }
+
+        public IPanel VisualObject { get; set; }
     }
 }

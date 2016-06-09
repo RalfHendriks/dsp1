@@ -16,6 +16,8 @@ namespace dsp.models
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Not());
         }
 
+        public IPanel VisualObject { get; set; }
+
         public string Name { get; set; }
 
         public int Value { get; set; }
@@ -37,6 +39,11 @@ namespace dsp.models
         public INode Clone()
         {
             return new Not();
+        }
+
+        public void generateVisual()
+        {
+            VisualObject = new NodePanel(this.Name, MethodBase.GetCurrentMethod().DeclaringType.Name.ToString());
         }
     }
 }

@@ -17,18 +17,10 @@ namespace dsp
         private CircuitSimulator simulator = new CircuitSimulator();
         private CircuitBuilder builder;
 
-        public MainClass()
-        {            
+        public MainClass(Panel panelParent)
+        {
             init();
-
-            Xor xor = new Xor() { NumberOfRequiredInputs = 2, InputValues = new List<int>() };
-            xor.InputValues.Add(0);
-            xor.InputValues.Add(1);
-
-            var hoi = xor.tryCalculate();
-
-
-            builder = new CircuitBuilder(factory); // shut up C#
+            builder = new CircuitBuilder(factory, panelParent); // shut up C#
         }
         
         public void buildFromFile(FileDialog dialog)
@@ -36,10 +28,13 @@ namespace dsp
             var result = dialog.ShowDialog();
             if(result == DialogResult.OK)
             {
-                reader.parseFile(dialog.FileName);
-                builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
-                // After the nodes have been built, pass the nodes to the simulator.
-                simulator.Nodes = builder.Nodes;
+                bool validCircuit  = reader.parseFile(dialog.FileName);
+                if (validCircuit)
+                {
+                    builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
+                    // After the nodes have been built, pass the nodes to the simulator.
+                    simulator.Nodes = builder.Nodes;
+                }
             }
         }
 
