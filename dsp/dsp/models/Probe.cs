@@ -9,7 +9,8 @@ namespace dsp.models
 {
     public class Probe : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
+        public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Probe());
@@ -21,12 +22,18 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
 
-        public int calculate(int input)
+        public int? tryCalculate()
         {
-            throw new NotImplementedException();
+            // Probe can only have one input value, and doesn't need to calculate anything.
+            if (InputValues.Count > 0)
+            {
+                Value = InputValues.ElementAt(0);
+                return Value;
+            }
+            return null;
         }
 
         public INode Clone()

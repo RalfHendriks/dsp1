@@ -37,6 +37,7 @@
             this.cbSin = new System.Windows.Forms.CheckBox();
             this.cbA = new System.Windows.Forms.CheckBox();
             this.cbB = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -46,7 +47,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Open  bestand";
+            this.button1.Text = "Open file";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -121,12 +122,24 @@
             this.cbB.TabIndex = 7;
             this.cbB.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(1054, 629);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Simulate";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1319, 664);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.cbB);
             this.Controls.Add(this.cbA);
             this.Controls.Add(this.cbSin);
@@ -153,6 +166,7 @@
         private System.Windows.Forms.CheckBox cbSin;
         private System.Windows.Forms.CheckBox cbA;
         private System.Windows.Forms.CheckBox cbB;
+        private System.Windows.Forms.Button button2;
     }
 }
 

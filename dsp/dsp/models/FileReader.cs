@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace dsp.models
 {
@@ -12,17 +13,11 @@ namespace dsp.models
         public Dictionary<string, string> nodeDefinitions { get; set; }
         public Dictionary<string, string[]> nodeConnections { get; set; }
 
-        public FileReader()
-        {
-            nodeConnections = new Dictionary<string, string[]>();
-            nodeDefinitions = new Dictionary<string, string>();
-        }
 
-
-        public void parseFile(string fileName)
+        public bool parseFile(string fileName)
         {
             string[] parsedFile = validate(fileName);
-            fillDefinitionsAndConnections(parsedFile);
+            return parsedFile != null ? fillDefinitionsAndConnections(parsedFile) : false;
         }
 
 
@@ -42,20 +37,23 @@ namespace dsp.models
                 {
                     if (!String.IsNullOrWhiteSpace(line) && !line.EndsWith(";"))
                     {
-                        throw new Exception("The document is not well-formed, please fix the errors and try again");
+                        MessageBox.Show("Invalid file format! Ending file read.");
+                        return null;
                     }
                     allLines.Add(line);
                 }
-               
-
             }
             file.Close();
 
             return allLines.ToArray();
         }
 
-        private void fillDefinitionsAndConnections(string[] lines)
+        private bool fillDefinitionsAndConnections(string[] lines)
         {
+            // Re-initialize the list to prevent collisions from previous files.
+            nodeConnections = new Dictionary<string, string[]>();
+            nodeDefinitions = new Dictionary<string, string>();
+
             bool shouldFillConnections = true;
             foreach (String line in lines)
             {
@@ -96,6 +94,7 @@ namespace dsp.models
                     nodeConnections.Add(name, connectedNodes);
                 }
             }
+            return true;
         }
     }
 }

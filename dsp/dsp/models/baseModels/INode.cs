@@ -11,9 +11,11 @@ namespace dsp.models
         String Name { get; set; }
         int Value { get; set; }
         IPanel VisualObject { get; set; }
-        INode[] ConnectedNodes { get; set; }
+        INode[] ConnectedOutputs { get; set; }
         INode Clone();
-        int calculate(int input);
+        int? tryCalculate();
         void generateVisual();
+        List<int> InputValues { get; set; }
+        int NumberOfRequiredInputs { get; set; }
     }
 }

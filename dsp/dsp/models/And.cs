@@ -9,7 +9,9 @@ namespace dsp.models
 {
     public class And: INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
+
+        public int NumberOfRequiredInputs { get; set; }
 
         public string Name { get; set; }
 
@@ -17,32 +19,35 @@ namespace dsp.models
 
         public IPanel VisualObject { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
+        public int? tryCalculate()
         {
-            bool allValuesHigh = true;
-            inputValues.Add(input);
-
-            if (inputValues.Count == ConnectedNodes.Length)
+            // An AND gate has a minimum required inputs of 2;
+            if (NumberOfRequiredInputs < 2)
             {
-                foreach (INode node in this.ConnectedNodes)
+                throw new Exception("Not all pins have been connected, please check your file and try again");
+            }
+            if (InputValues.Count == NumberOfRequiredInputs)
+            {
+                bool allValuesHigh = true;
+                foreach (int value in InputValues)
                 {
-                    if (node.Value == 0)
+                    if (value != 1)
                     {
                         allValuesHigh = false;
                         break;
                     }
-                }               
+                }
+                Value = allValuesHigh ? 1 : 0;
+                return Value;
             }
-
-
-            return allValuesHigh ? 1 : 0;
+            return null;
         }
 
         public static void register(NodeFactory factory)
         {
-            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(),new And());
+            factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new And());
         }
 
         public INode Clone()

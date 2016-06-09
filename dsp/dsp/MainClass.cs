@@ -12,8 +12,9 @@ namespace dsp
 {
     public class MainClass
     {
-        private NodeFactory factory = new NodeFactory();
         private FileReader reader = new FileReader();
+        private NodeFactory factory = new NodeFactory();
+        private CircuitSimulator simulator = new CircuitSimulator();
         private CircuitBuilder builder;
 
         public MainClass(Panel panelParent)
@@ -21,16 +22,28 @@ namespace dsp
             init();
             builder = new CircuitBuilder(factory, panelParent); // shut up C#
         }
-
+        
         public void buildFromFile(FileDialog dialog)
         {
             var result = dialog.ShowDialog();
             if(result == DialogResult.OK)
             {
-                reader.parseFile(dialog.FileName);
-                builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
+                bool validCircuit  = reader.parseFile(dialog.FileName);
+                if (validCircuit)
+                {
+                    builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
+                    // After the nodes have been built, pass the nodes to the simulator.
+                    simulator.Nodes = builder.Nodes;
+                }
             }
         }
+
+        public void simulate()
+        {
+            simulator.simulate();
+        }
+
+        
 
         private void init()
         {

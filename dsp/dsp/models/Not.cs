@@ -9,7 +9,8 @@ namespace dsp.models
 {
     public class Not : INode
     {
-        private List<int> inputValues = new List<int>();
+        public List<int> InputValues { get; set; }
+        public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
         {
             factory.addNodeType(MethodBase.GetCurrentMethod().DeclaringType.Name.ToString(), new Not());
@@ -21,11 +22,18 @@ namespace dsp.models
 
         public int Value { get; set; }
 
-        public INode[] ConnectedNodes { get; set; }
+        public INode[] ConnectedOutputs { get; set; }
 
-        public int calculate(int input)
+        public int? tryCalculate()
         {
-            throw new NotImplementedException();
+            // A not can only have one input value, so its safe to get only the first one
+            if (InputValues.ElementAt(0) == 1)
+            {
+                Value = 0;
+                return Value;
+            }
+            Value = 1;
+            return Value;         
         }
 
         public INode Clone()
