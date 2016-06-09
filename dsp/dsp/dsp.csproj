@@ -56,10 +56,11 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="models\And.cs" />
     <Compile Include="models\baseModels\INode.cs" />
-    <Compile Include="models\baseModels\NodeInput.cs">
+    <Compile Include="models\baseModels\IPanel.cs" />
+    <Compile Include="models\InputPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="models\baseModels\NodeObject.cs">
+    <Compile Include="models\NodePanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="models\Input.cs" />

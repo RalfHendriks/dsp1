@@ -15,6 +15,8 @@ namespace dsp.models
 
         public int Value { get; set; }
 
+        public IPanel VisualObject { get; set; }
+
         public INode[] ConnectedNodes { get; set; }
 
         public int calculate(int input)
@@ -46,6 +48,11 @@ namespace dsp.models
         public INode Clone()
         {
             return new And();
+        }
+
+        public void generateVisual()
+        {
+            VisualObject = new NodePanel(this.Name, MethodBase.GetCurrentMethod().DeclaringType.Name.ToString());
         }
     }
 }

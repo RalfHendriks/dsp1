@@ -17,15 +17,20 @@ namespace dsp
         public Form1()
         {
             InitializeComponent();
-            main = new MainClass();
+            main = new MainClass(this.panel1);
+            /*
             NodeObject p = new NodeObject("Node1","Nand");
             NodeObject n = new NodeObject("Node2","Xor");
+            NodeInput i = new NodeInput("A");
+            i.Location = new Point(360, 140);
             p.Location = new Point(this.panel1.Location.X / 2, this.panel1.Location.Y / 2);
             n.Location = new Point(120, 140);
             n.Parent = this.panel1;
             p.Parent = this.panel1;
+            i.Parent = this.panel1;
+            i.Show();
             p.Show();
-            n.Show();
+            n.Show();*/
         }
 
         private void button1_Click(object sender, EventArgs e)

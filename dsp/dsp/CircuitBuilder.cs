@@ -1,20 +1,27 @@
 ﻿using dsp.models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace dsp
 {
     class CircuitBuilder
     {
         private NodeFactory factory;
+        private Panel parent;
         public List<INode> nodes { get; private set; }
 
-        public CircuitBuilder(NodeFactory factory)
+        public int xOffset = 100;
+        public int yOffset = 100;
+
+        public CircuitBuilder(NodeFactory factory,Panel panel)
         {            
             this.factory = factory;
+            this.parent = panel;
         }
 
         // Request the objects from the factory, based on the dictionary
@@ -48,7 +55,7 @@ namespace dsp
                     
                     // Set the ConnectedNodes property
                     node.ConnectedNodes = connectedNodes;
-                }          
+                }
             }
         }
     }

@@ -16,10 +16,10 @@ namespace dsp
         private FileReader reader = new FileReader();
         private CircuitBuilder builder;
 
-        public MainClass()
-        {            
+        public MainClass(Panel panelParent)
+        {
             init();
-            builder = new CircuitBuilder(factory); // shut up C#
+            builder = new CircuitBuilder(factory, panelParent); // shut up C#
         }
 
         public void buildFromFile(FileDialog dialog)

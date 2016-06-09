@@ -17,6 +17,8 @@ namespace dsp.models
 
         public string Name { get; set; }
 
+        public IPanel VisualObject { get; set; }
+
         public int Value { get; set; }
 
         public INode[] ConnectedNodes { get; set; }
@@ -30,6 +32,11 @@ namespace dsp.models
         public INode Clone()
         {
             return new Nor();
+        }
+
+        public void generateVisual()
+        {
+            VisualObject = new NodePanel(this.Name, MethodBase.GetCurrentMethod().DeclaringType.Name.ToString());
         }
     }
 }

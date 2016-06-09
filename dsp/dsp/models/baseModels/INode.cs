@@ -10,8 +10,10 @@ namespace dsp.models
     {
         String Name { get; set; }
         int Value { get; set; }
+        IPanel VisualObject { get; set; }
         INode[] ConnectedNodes { get; set; }
         INode Clone();
         int calculate(int input);
+        void generateVisual();
     }
 }
