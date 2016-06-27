@@ -15,7 +15,7 @@ namespace dsp
 
         public CircuitSimulator()
         {
-            Debug.WriteLine("CircuitSimulator: ready to simulate");
+            Console.WriteLine("CircuitSimulator: ready to simulate");
         }
 
         private void resetCircuit()
@@ -40,20 +40,20 @@ namespace dsp
 
                 if (temp == null)
                 {
-                    Debug.WriteLine(String.Format("\nPutting {0} on hold.", node.Name));
+                    Console.WriteLine(String.Format("\nPutting {0} on hold.", node.Name));
                     // node has not yet recieved all its values
                     nodesOnHold.Add(node);
                 }
                 else
                 {
                     Thread.Sleep(15);
-                    Debug.WriteLine(String.Format("\nStarting simulation of {0}({1}), Value: {2}", node.Name, node.GetType().ToString(), node.Value));
+                    Console.WriteLine(String.Format("\nStarting simulation of {0}({1}), Value: {2}", node.Name, node.GetType().ToString(), node.Value));
                     // Check if the Node has any nodes to spit out to.
                     if (node.ConnectedOutputs != null)
                     {
                         foreach (var outputNode in node.ConnectedOutputs)
                         {
-                            Debug.WriteLine(String.Format("\tAdding {0} to {1}.InputValues", temp, outputNode.Name));
+                            Console.WriteLine(String.Format("\tAdding {0} to {1}.InputValues", temp, outputNode.Name));
                             outputNode.InputValues.Add((int)temp);
                         }
                     }

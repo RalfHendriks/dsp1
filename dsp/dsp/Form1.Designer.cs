@@ -38,6 +38,7 @@
             this.cbA = new System.Windows.Forms.CheckBox();
             this.cbB = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -59,14 +60,14 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1295, 481);
+            this.panel1.Size = new System.Drawing.Size(1295, 334);
             this.panel1.TabIndex = 1;
             // 
             // lbSin
             // 
             this.lbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbSin.AutoSize = true;
-            this.lbSin.Location = new System.Drawing.Point(22, 504);
+            this.lbSin.Location = new System.Drawing.Point(17, 377);
             this.lbSin.Name = "lbSin";
             this.lbSin.Size = new System.Drawing.Size(22, 13);
             this.lbSin.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             this.lbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbA.AutoSize = true;
-            this.lbA.Location = new System.Drawing.Point(22, 534);
+            this.lbA.Location = new System.Drawing.Point(17, 407);
             this.lbA.Name = "lbA";
             this.lbA.Size = new System.Drawing.Size(14, 13);
             this.lbA.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.lbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbB.AutoSize = true;
-            this.lbB.Location = new System.Drawing.Point(22, 564);
+            this.lbB.Location = new System.Drawing.Point(17, 437);
             this.lbB.Name = "lbB";
             this.lbB.Size = new System.Drawing.Size(14, 13);
             this.lbB.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             this.cbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbSin.AutoSize = true;
-            this.cbSin.Location = new System.Drawing.Point(70, 504);
+            this.cbSin.Location = new System.Drawing.Point(65, 377);
             this.cbSin.Name = "cbSin";
             this.cbSin.Size = new System.Drawing.Size(15, 14);
             this.cbSin.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             this.cbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbA.AutoSize = true;
-            this.cbA.Location = new System.Drawing.Point(70, 534);
+            this.cbA.Location = new System.Drawing.Point(65, 407);
             this.cbA.Name = "cbA";
             this.cbA.Size = new System.Drawing.Size(15, 14);
             this.cbA.TabIndex = 6;
@@ -120,7 +121,7 @@
             // 
             this.cbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbB.AutoSize = true;
-            this.cbB.Location = new System.Drawing.Point(70, 564);
+            this.cbB.Location = new System.Drawing.Point(65, 437);
             this.cbB.Name = "cbB";
             this.cbB.Size = new System.Drawing.Size(15, 14);
             this.cbB.TabIndex = 7;
@@ -139,12 +140,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(699, 370);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(608, 205);
+            this.textBox1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1319, 664);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cbB);
             this.Controls.Add(this.cbA);
@@ -173,6 +184,7 @@
         private System.Windows.Forms.CheckBox cbA;
         private System.Windows.Forms.CheckBox cbB;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

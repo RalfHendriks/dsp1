@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dsp.models;
+using System.IO;
 
 namespace dsp
 {
@@ -17,6 +18,7 @@ namespace dsp
         public Form1()
         {
             InitializeComponent();
+            Console.SetOut(new TextBoxWriter(textBox1));
             main = new MainClass(this);
             /*
             NodeObject p = new NodeObject("Node1","Nand");
@@ -47,6 +49,38 @@ namespace dsp
         {
             CheckBox selected = (CheckBox)sender;
             main.updateInput(selected.Tag.ToString());
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+
+    public class TextBoxWriter : TextWriter
+    {
+        TextBox _output = null;
+
+        public TextBoxWriter(TextBox output)
+        {
+            _output = output;
+        }
+
+        public override void Write(char[] buffer, int index, int count)
+        {
+            base.Write(buffer, index, count);
+            _output.AppendText(new string(buffer));
+        }
+
+        //public override void Write(char value)
+        //{
+        //    base.Write(value);
+        //    _output.AppendText(value.ToString());
+        //}
+
+        public override Encoding Encoding
+        {
+            get { return System.Text.Encoding.UTF8; }
         }
     }
 }

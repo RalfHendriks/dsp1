@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-06-09T10:14:01" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '419e59ac-3802-4881-a681-c7f3ed7b7f9c' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '4870adab-9a4a-411a-9086-7c58f0efbd24' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '70426c38-2cd3-4820-b2fc-ed86b6177b68' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'a4e3bf92-7813-4363-8b91-9a0209f738a4' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::buildNodes' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::buildNodes::nodeConnections' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::buildNodes::nodeTypes' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::CircuitBuilder' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::CircuitBuilder::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::factory' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitBuilder::Nodes' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::CircuitSimulator' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::loopThroughNodes' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::loopThroughNodes::nodes' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::loopThroughNodes::nodesOnHold' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::Nodes' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::resetCircuit' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::CircuitSimulator::simulate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button1' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button1_Click' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button1_Click::e' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button1_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button2' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button2_Click' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button2_Click::e' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::button2_Click::sender' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::cbA' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::cbB' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::cbSin' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::components' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::Dispose' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::Dispose::disposing' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::Form1' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::InitializeComponent' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::lbA' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::lbB' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::lbSin' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::main' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::ofdFileFinder' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Form1::panel1' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::builder' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::buildFromFile' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::buildFromFile::dialog' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::factory' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::init' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::MainClass' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::reader' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::simulate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::MainClass::simulator' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::And' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::And::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::FileReader' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::fillDefinitionsAndConnections' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::fillDefinitionsAndConnections::lines' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::nodeConnections' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::nodeDefinitions' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::parseFile' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::parseFile::fileName' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::validate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::FileReader::validate::fileName' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode' -  (Interface)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::INode::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::Input' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Input::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::Nand' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nand::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::Nor' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Nor::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::Not' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Not::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::Or' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Or::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::Probe' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Probe::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::Clone' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::ConnectedOutputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::InputValues' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::Name' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::NumberOfRequiredInputs' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::register' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::register::factory' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::tryCalculate' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::Value' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::models::Xor::Xor' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::_nodes' -  (Property)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::addNodeType' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::addNodeType::name' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::addNodeType::type' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::CreateNode' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::CreateNode::type' -  (Parameter)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::NodeFactory::NodeFactory' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Medium" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Program' -  (Class)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::dsp::Program::Main' -  (Operation)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::Dictionary&lt;String‎, INode‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::Dictionary&lt;String‎, String‎[]‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::Dictionary&lt;String‎, String‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::List&lt;INode‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Collections::Generic::List&lt;Int32‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::ComponentModel' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::ComponentModel::IContainer' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::EventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Nullable' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Nullable&lt;Int32‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms' -  (Package)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::Button' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::CheckBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::FileDialog' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::Form' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::Label' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::OpenFileDialog' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'dspModel::System::Windows::Forms::Panel' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::CircuitSimulator to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::FileReader to dspModel::System::Collections::Generic::Dictionary&lt;String‎, String‎[]‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::FileReader to dspModel::System::Collections::Generic::Dictionary&lt;String‎, String‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::Form1 to dspModel::System::Windows::Forms::Form (Generalization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::INode to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::INode to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Input to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Input to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Input to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nand to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nand to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nand to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nor to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nor to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Nor to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Not to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Not to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Not to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Or to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Or to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Or to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Probe to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Probe to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Probe to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Xor to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Xor to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::Xor to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::And to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::And to dspModel::System::Collections::Generic::List&lt;Int32‎&gt; (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::models::And to dspModel::dsp::models::INode (InterfaceRealization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::dsp::CircuitBuilder to dspModel::dsp::models::INode (Association)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: dspModel::System::Windows::Forms::OpenFileDialog to dspModel::System::Windows::Forms::FileDialog (Generalization)" />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="High" Text="(16) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="High" Text="(20) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-06-09T10:14:08" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
