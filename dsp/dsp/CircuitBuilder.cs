@@ -13,7 +13,7 @@ namespace dsp
     {
         private NodeFactory factory;
         private Panel parent;
-        public INode[] Nodes { get; private set; }
+        public List<INode> Nodes { get; private set; }
 
         public CircuitBuilder(NodeFactory factory,Panel panel)
         {            
@@ -39,8 +39,6 @@ namespace dsp
             }
 
             // Second iteration: after all the Nodes have been built, fill their ConnectedNodes arrays.
-            int rowCountX = 0;
-            int rowCountY = 0;
             foreach (INode node in nodes)
             {
                 // Get the nodes that are connected from the nodeConnections dictionary
@@ -61,18 +59,46 @@ namespace dsp
                     // Set the ConnectedNodes property
                    node.ConnectedOutputs = connectedOutputs;
                 }
-
-                INode[] confirmedOutputs = nodes.Where(y => y.ConnectedOutputs != null).ToArray();
-                var previousNodes = confirmedOutputs.Where(c => c.ConnectedOutputs.Contains(node));
-
                 node.generateVisual();
-                node.VisualObject.Location = new Point(rowCountX * 100, rowCountY * 100);
-                node.VisualObject.Parent = parent;
-                node.VisualObject.Show();
-                rowCountY++;
+                if(typeof(Input) == node.GetType()){
+                    INode[] VisualCreatedNodes = nodes.Where(y => y.VisualObject != null).ToArray();
+                    int count = VisualCreatedNodes.Where(x => x.VisualObject.Location.X != -1 && x.VisualObject.Location.Y != -1 & x.VisualObject.Location.X >= 0).Count();
+                    node.VisualObject.Location = new Point(0,(count * 100));
+                    node.VisualObject.Parent = parent;
+                    node.VisualObject.Show();
+                }
             }
+
+            foreach (INode selectedNode in nodes.Where(x => x.VisualObject.Location.X == -1 && x.VisualObject.Location.Y == -1))
+            {
+                INode[] confirmedOutputs = nodes.Where(y => y.ConnectedOutputs != null).ToArray();
+                INode node = selectedNode;
+                int xCount = 0;
+                while (true)
+                {
+                    var previousNodes = confirmedOutputs.Where(c => c.ConnectedOutputs.Contains(node));
+                    if (previousNodes.Count() == 0)
+                        break;
+                    else
+                    {
+                        node = previousNodes.First();
+                        xCount++;
+                    }
+                }
+                selectedNode.VisualObject.Location = new Point((xCount * 200), node.VisualObject.Location.Y);
+                selectedNode.VisualObject.Parent = parent;
+                selectedNode.VisualObject.Show();
+                //int y = nodes.Where(x => x.VisualObject.Location.X != -1 && x.VisualObject.Location.Y != -1 & x.VisualObject.Location.X =)
+                //var b = selectedNode.VisualObject;
+            }
+          
+
+            /*node.generateVisual();
+            node.VisualObject.Location = new Point(rowCountX * 100, rowCountY * 100);
+            node.VisualObject.Parent = parent;
+            node.VisualObject.Show();*/
             // Expose the local List of INodes as a safe, unsettable Array of INodes.
-            Nodes = nodes.ToArray();
+            Nodes = nodes;
         }
     }
 }

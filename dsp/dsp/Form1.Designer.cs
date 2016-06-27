@@ -70,7 +70,7 @@
             this.lbSin.Name = "lbSin";
             this.lbSin.Size = new System.Drawing.Size(22, 13);
             this.lbSin.TabIndex = 2;
-            this.lbSin.Text = "Sin";
+            this.lbSin.Text = "Cin";
             // 
             // lbA
             // 
@@ -100,7 +100,9 @@
             this.cbSin.Name = "cbSin";
             this.cbSin.Size = new System.Drawing.Size(15, 14);
             this.cbSin.TabIndex = 5;
+            this.cbSin.Tag = "Cin";
             this.cbSin.UseVisualStyleBackColor = true;
+            this.cbSin.CheckedChanged += new System.EventHandler(this.cbSin_CheckedChanged);
             // 
             // cbA
             // 
@@ -110,7 +112,9 @@
             this.cbA.Name = "cbA";
             this.cbA.Size = new System.Drawing.Size(15, 14);
             this.cbA.TabIndex = 6;
+            this.cbA.Tag = "A";
             this.cbA.UseVisualStyleBackColor = true;
+            this.cbA.CheckedChanged += new System.EventHandler(this.cbSin_CheckedChanged);
             // 
             // cbB
             // 
@@ -120,7 +124,9 @@
             this.cbB.Name = "cbB";
             this.cbB.Size = new System.Drawing.Size(15, 14);
             this.cbB.TabIndex = 7;
+            this.cbB.Tag = "B";
             this.cbB.UseVisualStyleBackColor = true;
+            this.cbB.CheckedChanged += new System.EventHandler(this.cbSin_CheckedChanged);
             // 
             // button2
             // 
@@ -159,7 +165,7 @@
 
         private System.Windows.Forms.OpenFileDialog ofdFileFinder;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbSin;
         private System.Windows.Forms.Label lbA;
         private System.Windows.Forms.Label lbB;

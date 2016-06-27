@@ -31,6 +31,7 @@ namespace dsp.models
             this.BackColor = BG;
             this.BorderStyle = BSTYLE;
             this.Paint += new PaintEventHandler(PaintEventHandler);
+            this.Location = new Point(-1,-1);
 
             lbName = new Label();
             lbName.Parent = this;

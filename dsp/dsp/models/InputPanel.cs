@@ -13,7 +13,7 @@ namespace dsp.models
         private Label _lbName;
         private String _inputName;
 
-        static int WIDTH = 150;
+        static int WIDTH = 130;
         static int HEIGHT = 90;
         static Color BG = Color.White;
 
@@ -25,6 +25,7 @@ namespace dsp.models
             this.Height = HEIGHT;
             this.BackColor = BG;
             this.Paint += new PaintEventHandler(PaintEventHandler);
+            this.Location = new Point(-1, -1);
 
             lbName = new Label();
             lbName.Parent = this;
