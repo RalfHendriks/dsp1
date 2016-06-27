@@ -73,7 +73,7 @@ namespace dsp
             var watch = Stopwatch.StartNew();
             resetCircuit();
 
-            Debug.WriteLine("\n\n\n\n---------------Starting Simulation--------------");
+            Console.WriteLine("\n\n\n\n---------------Starting Simulation--------------");
 
             try
             {
@@ -87,15 +87,15 @@ namespace dsp
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e.Message);
+                Console.WriteLine(e.Message);
                 return;
             }
            
 
-            Debug.WriteLine("\n---------------Ending Simulation--------------\n");
+            Console.WriteLine("\n---------------Ending Simulation--------------\n");
 
             watch.Stop();
-            Debug.WriteLine("Operation took " + watch.ElapsedMilliseconds + "ms");
+            Console.WriteLine("Operation took " + watch.ElapsedMilliseconds + "ms");
         }
     }
 }
