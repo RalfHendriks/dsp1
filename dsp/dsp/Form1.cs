@@ -17,7 +17,7 @@ namespace dsp
         public Form1()
         {
             InitializeComponent();
-            main = new MainClass(this.panel1);
+            main = new MainClass(this);
             /*
             NodeObject p = new NodeObject("Node1","Nand");
             NodeObject n = new NodeObject("Node2","Xor");
@@ -41,6 +41,12 @@ namespace dsp
         private void button2_Click(object sender, EventArgs e)
         {
             main.simulate();
+        }
+
+        private void cbSin_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox selected = (CheckBox)sender;
+            main.updateInput(selected.Tag.ToString());
         }
     }
 }

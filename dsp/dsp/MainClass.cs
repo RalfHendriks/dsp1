@@ -16,13 +16,24 @@ namespace dsp
         private NodeFactory factory = new NodeFactory();
         private CircuitSimulator simulator = new CircuitSimulator();
         private CircuitBuilder builder;
+        private Form1 _parent;
 
-        public MainClass(Panel panelParent)
+        public MainClass(Form1 parent)
         {
             init();
-            builder = new CircuitBuilder(factory, panelParent); // shut up C#
+            this._parent = parent;
+            builder = new CircuitBuilder(factory, _parent.panel1);
         }
-        
+
+        public void updateInput(string name)
+        {
+            if (builder.Nodes != null)
+            {
+                INode node = builder.Nodes.FirstOrDefault(x => x.Name == name);
+                node.Value = node.Value == 0 ? 1 : 0;
+            }
+        }
+
         public void buildFromFile(FileDialog dialog)
         {
             var result = dialog.ShowDialog();
@@ -33,7 +44,7 @@ namespace dsp
                 {
                     builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
                     // After the nodes have been built, pass the nodes to the simulator.
-                    simulator.Nodes = builder.Nodes;
+                    simulator.Nodes = builder.Nodes.ToArray();
                 }
             }
         }
