@@ -9,6 +9,8 @@ namespace dsp.models
 {
     public class Input : INode
     {
+        private int _value;
+        public List<Observer> Observers = new List<Observer>();
         public List<int> InputValues { get; set; }
         public int NumberOfRequiredInputs { get; set; }
         public static void register(NodeFactory factory)
@@ -28,7 +30,17 @@ namespace dsp.models
 
         public string Name { get; set; }
 
-        public int Value { get; set; }
+        public int Value
+        {
+            get{
+                return _value;
+            }
+            set
+            {
+                _value = value;
+                Notify();
+            }
+        }
 
         public INode[] ConnectedOutputs { get; set; }
 
@@ -38,5 +50,23 @@ namespace dsp.models
         }
 
         public IPanel VisualObject { get; set; }
+
+        public void Attach(Observer observer)
+        {
+            this.Observers.Add(observer);
+        }
+
+        public void Detach(Observer observer)
+        {
+            this.Observers.Remove(observer);
+        }
+
+        public void Notify()
+        {
+            foreach (Observer ob in this.Observers)
+            {
+                ob.Update();
+            }
+        }
     }
 }

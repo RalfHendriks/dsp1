@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="MainClass.cs" />
     <Compile Include="models\And.cs" />
+    <Compile Include="models\baseModels\ICheckBox.cs" />
     <Compile Include="models\baseModels\INode.cs" />
     <Compile Include="models\baseModels\IPanel.cs" />
     <Compile Include="models\InputPanel.cs">
@@ -68,10 +69,15 @@
     <Compile Include="models\Nor.cs" />
     <Compile Include="models\FileReader.cs" />
     <Compile Include="models\Not.cs" />
+    <Compile Include="models\ObservableCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="models\Or.cs" />
     <Compile Include="models\Probe.cs" />
     <Compile Include="models\Xor.cs" />
     <Compile Include="NodeFactory.cs" />
+    <Compile Include="NodeInputObserver.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

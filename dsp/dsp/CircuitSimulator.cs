@@ -65,13 +65,15 @@ namespace dsp
         {
             if (Nodes == null)
             {
+                Console.WriteLine("You have yet to provide a file to build the circuit from.");
                 return;
-                //throw new Exception("You have yet to provide a file to build the circuit from");
             }
-            List<INode> nodesOnHold = new List<INode>();           
+            List<INode> nodesOnHold = new List<INode>();
+
+            resetCircuit();
 
             var watch = Stopwatch.StartNew();
-            resetCircuit();
+
             // clear console
             Console.WriteLine("\n\n\n\n---------------Starting Simulation--------------");
 

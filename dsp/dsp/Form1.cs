@@ -43,6 +43,20 @@ namespace dsp
         {
             
         }
+
+        public List<CheckBox> getInputValues()
+        {
+            List<CheckBox> checkBoxes = new List<CheckBox>(); 
+            foreach (Control control in this.Controls)
+            {
+                if (control.GetType() == typeof(CheckBox))
+                {
+                    CheckBox b = (CheckBox)control;
+                    checkBoxes.Add(b);
+                }
+            }
+            return checkBoxes;
+        }
     }
 
     public class TextBoxWriter : TextWriter

@@ -45,5 +45,21 @@ namespace dsp.models
         {
             VisualObject = new InputPanel(this.Name);
         }
+
+
+        public void Attach(Observer observer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Detach(Observer observer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Notify()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

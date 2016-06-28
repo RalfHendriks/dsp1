@@ -15,6 +15,7 @@ namespace dsp
         private FileReader reader = new FileReader();
         private NodeFactory factory = new NodeFactory();
         private CircuitSimulator simulator = new CircuitSimulator();
+        private List<CheckBox> _inputFields = new List<CheckBox>();
         private CircuitBuilder builder;
         private Form1 _parent;
 
@@ -22,7 +23,8 @@ namespace dsp
         {
             init();
             this._parent = parent;
-            builder = new CircuitBuilder(factory, _parent.panel1);
+            _inputFields = parent.getInputValues();
+            builder = new CircuitBuilder(factory, _parent.panel1, _inputFields);
         }
 
         public void updateInput(string name,int value)
@@ -44,6 +46,11 @@ namespace dsp
                 {
                     builder.buildNodes(reader.nodeDefinitions, reader.nodeConnections);
                     // After the nodes have been built, pass the nodes to the simulator.
+
+                    foreach (INode item in builder.Nodes.Where(x => x.GetType() == typeof(Input)))
+                    {
+                        
+                    }
                     simulator.Nodes = builder.Nodes.ToArray();
                 }
                 else

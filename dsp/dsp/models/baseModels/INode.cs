@@ -17,5 +17,8 @@ namespace dsp.models
         void generateVisual();
         List<int> InputValues { get; set; }
         int NumberOfRequiredInputs { get; set; }
+        void Attach(Observer observer);
+        void Detach(Observer observer);
+        void Notify();
     }
 }

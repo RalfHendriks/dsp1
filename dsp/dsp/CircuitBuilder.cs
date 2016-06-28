@@ -13,12 +13,14 @@ namespace dsp
     {
         private NodeFactory factory;
         private Panel parent;
+        private List<CheckBox> _inputFields;
         public List<INode> Nodes { get; private set; }
 
-        public CircuitBuilder(NodeFactory factory,Panel panel)
+        public CircuitBuilder(NodeFactory factory,Panel panel,List<CheckBox> inputFields)
         {            
             this.factory = factory;
             this.parent = panel;
+            this._inputFields = inputFields;
         }
 
         // Request the objects from the factory, based on the dictionary
@@ -62,10 +64,12 @@ namespace dsp
                 node.generateVisual();
                 if(typeof(Input) == node.GetType()){
                     INode[] VisualCreatedNodes = nodes.Where(y => y.VisualObject != null).ToArray();
+                    node.Attach(new NodeInputObserver(node, _inputFields.Where(c => c.Tag.Equals(node.Name)).First()));
                     int count = VisualCreatedNodes.Where(x => x.VisualObject.Location != new Point() & x.VisualObject.Location.X >= 0).Count();
                     node.VisualObject.Location = new Point(10,(30 + count * 140));
                     node.VisualObject.Parent = parent;
                     node.VisualObject.Show();
+                    node.Notify();
                 }
             }
             

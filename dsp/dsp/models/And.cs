@@ -59,5 +59,20 @@ namespace dsp.models
         {
             VisualObject = new NodePanel(this.Name, MethodBase.GetCurrentMethod().DeclaringType.Name.ToString());
         }
+
+        public void Attach(Observer observer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Detach(Observer observer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Notify()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
