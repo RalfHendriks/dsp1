@@ -20,12 +20,10 @@ namespace dsp.models
         public InputPanel(string name)
         {
             NodeName = name;
-
             this.Width = WIDTH;
             this.Height = HEIGHT;
             this.BackColor = BG;
             this.Paint += new PaintEventHandler(PaintEventHandler);
-            this.Location = new Point(-1, -1);
 
             lbName = new Label();
             lbName.Parent = this;
