@@ -16,7 +16,7 @@ namespace dsp.models
         private string _nodeName;
         private string _nodeType;
 
-        static int WIDTH = 150;
+        static int WIDTH = 130;
         static int HEIGHT = 90;
         static Color BG = Color.White;
         static BorderStyle BSTYLE = BorderStyle.FixedSingle;
@@ -26,12 +26,11 @@ namespace dsp.models
             NodeName = nodeName;
             NodeType = nodeType;
 
-            this.Width = Width;
+            this.Width = WIDTH;
             this.Height = HEIGHT;
             this.BackColor = BG;
             this.BorderStyle = BSTYLE;
             this.Paint += new PaintEventHandler(PaintEventHandler);
-            this.Location = new Point(-1,-1);
 
             lbName = new Label();
             lbName.Parent = this;
@@ -74,7 +73,7 @@ namespace dsp.models
 
         public void PaintEventHandler(object sender, PaintEventArgs e)
         {
-            _image = Image.FromFile("image/" + _nodeType + ".png");
+            _image = Image.FromFile("image/" + NodeType + ".png");
             e.Graphics.DrawImage(_image, new Point(10, 22)); 
         }
 
