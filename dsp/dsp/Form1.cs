@@ -20,19 +20,6 @@ namespace dsp
             InitializeComponent();
             Console.SetOut(new TextBoxWriter(textBox1));
             main = new MainClass(this);
-            /*
-            NodeObject p = new NodeObject("Node1","Nand");
-            NodeObject n = new NodeObject("Node2","Xor");
-            NodeInput i = new NodeInput("A");
-            i.Location = new Point(360, 140);
-            p.Location = new Point(this.panel1.Location.X / 2, this.panel1.Location.Y / 2);
-            n.Location = new Point(120, 140);
-            n.Parent = this.panel1;
-            p.Parent = this.panel1;
-            i.Parent = this.panel1;
-            i.Show();
-            p.Show();
-            n.Show();*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,13 +29,14 @@ namespace dsp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
             main.simulate();
         }
 
         private void cbSin_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox selected = (CheckBox)sender;
-            main.updateInput(selected.Tag.ToString());
+            main.updateInput(selected.Tag.ToString(),selected.Checked != true ? 0 : 1);
         }
 
         private void Form_Load(object sender, EventArgs e)

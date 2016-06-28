@@ -72,7 +72,7 @@ namespace dsp
 
             var watch = Stopwatch.StartNew();
             resetCircuit();
-
+            // clear console
             Console.WriteLine("\n\n\n\n---------------Starting Simulation--------------");
 
             try

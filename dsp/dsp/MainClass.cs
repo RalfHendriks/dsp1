@@ -25,12 +25,12 @@ namespace dsp
             builder = new CircuitBuilder(factory, _parent.panel1);
         }
 
-        public void updateInput(string name)
+        public void updateInput(string name,int value)
         {
             if (builder.Nodes != null)
             {
                 INode node = builder.Nodes.FirstOrDefault(x => x.Name == name);
-                node.Value = node.Value == 0 ? 1 : 0;
+                node.Value = value;
             }
         }
 
@@ -46,12 +46,17 @@ namespace dsp
                     // After the nodes have been built, pass the nodes to the simulator.
                     simulator.Nodes = builder.Nodes.ToArray();
                 }
+                else
+                {
+                    MessageBox.Show("Invalid circuit loaded!");
+                }
             }
         }
 
         public void simulate()
         {
             simulator.simulate();
+
         }
 
         
