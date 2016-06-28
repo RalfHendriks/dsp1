@@ -76,6 +76,8 @@ namespace dsp
                 {
                     if (lastNode.ConnectedOutputs == null)
                         break;
+                    if (lastNode.ConnectedOutputs.First().VisualObject.Location != new Point() && lastNode.ConnectedOutputs.Last().VisualObject.Location != new Point())
+                        break;
                     INode nextNode = lastNode.ConnectedOutputs.First().VisualObject.Location == new Point() ?lastNode.ConnectedOutputs.First() : lastNode.ConnectedOutputs.Last();
                     nextNode.VisualObject.Location = nextNode.VisualObject.Location != new Point() ? nextNode.VisualObject.Location : new Point(lastNode.VisualObject.Location.X + 200, lastNode.VisualObject.Location.Y);
                     nextNode.VisualObject.Parent = parent;
