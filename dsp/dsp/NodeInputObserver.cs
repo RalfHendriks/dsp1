@@ -11,7 +11,6 @@ namespace dsp
     public class NodeInputObserver : Observer
     {
         private CheckBox _target;
-        private string _observerState;
         private INode _inputNode;
 
         public NodeInputObserver(INode node, CheckBox target)
