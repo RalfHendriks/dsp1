@@ -68,21 +68,23 @@ namespace dsp
                     node.VisualObject.Show();
                 }
             }
-            /*
+            
             foreach (INode selectedNode in nodes.Where(x => x.VisualObject.Location != new Point()))
             {
                 INode lastNode = selectedNode;
                 while (true)
                 {
-                    INode nextNode = lastNode.ConnectedOutputs.First();
-                    nextNode.VisualObject.Location = new Point(lastNode.VisualObject.Location.X + 200, lastNode.VisualObject.Location.Y);
+                    if (lastNode.ConnectedOutputs == null)
+                        break;
+                    INode nextNode = lastNode.ConnectedOutputs.First().VisualObject.Location == new Point() ?lastNode.ConnectedOutputs.First() : lastNode.ConnectedOutputs.Last();
+                    nextNode.VisualObject.Location = nextNode.VisualObject.Location != new Point() ? nextNode.VisualObject.Location : new Point(lastNode.VisualObject.Location.X + 200, lastNode.VisualObject.Location.Y);
                     nextNode.VisualObject.Parent = parent;
                     nextNode.VisualObject.Show();
                     lastNode = nextNode;
                 }
-            }*/
+            }
 
-            foreach (INode selectedNode in nodes.Where(x => x.VisualObject.Location == new Point()))
+            /*foreach (INode selectedNode in nodes.Where(x => x.VisualObject.Location == new Point()))
             {
                 INode[] confirmedOutputs = nodes.Where(y => y.ConnectedOutputs != null).ToArray();
                 INode node = selectedNode;
@@ -99,12 +101,12 @@ namespace dsp
                     }
                 }
                 var dd = node.VisualObject.Location.Y;
-                selectedNode.VisualObject.Location = new Point((xCount * 200), node.VisualObject.Location.Y);
+                selectedNode.VisualObject.Location = new Point((xCount * 200), node.VisualObject.Location.Y - 20);
                 selectedNode.VisualObject.Parent = parent;
                 selectedNode.VisualObject.Show();
                 //int y = nodes.Where(x => x.VisualObject.Location.X != -1 && x.VisualObject.Location.Y != -1 & x.VisualObject.Location.X =)
                 //var b = selectedNode.VisualObject;
-            }
+            }*/
           
 
             /*node.generateVisual();

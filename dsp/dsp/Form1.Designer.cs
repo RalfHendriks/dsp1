@@ -44,7 +44,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(1175, 629);
+            this.button1.Location = new System.Drawing.Point(1340, 776);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 0;
@@ -60,14 +60,14 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1295, 334);
+            this.panel1.Size = new System.Drawing.Size(1460, 481);
             this.panel1.TabIndex = 1;
             // 
             // lbSin
             // 
             this.lbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbSin.AutoSize = true;
-            this.lbSin.Location = new System.Drawing.Point(17, 377);
+            this.lbSin.Location = new System.Drawing.Point(17, 524);
             this.lbSin.Name = "lbSin";
             this.lbSin.Size = new System.Drawing.Size(22, 13);
             this.lbSin.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.lbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbA.AutoSize = true;
-            this.lbA.Location = new System.Drawing.Point(17, 407);
+            this.lbA.Location = new System.Drawing.Point(17, 554);
             this.lbA.Name = "lbA";
             this.lbA.Size = new System.Drawing.Size(14, 13);
             this.lbA.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.lbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbB.AutoSize = true;
-            this.lbB.Location = new System.Drawing.Point(17, 437);
+            this.lbB.Location = new System.Drawing.Point(17, 584);
             this.lbB.Name = "lbB";
             this.lbB.Size = new System.Drawing.Size(14, 13);
             this.lbB.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             this.cbSin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbSin.AutoSize = true;
-            this.cbSin.Location = new System.Drawing.Point(65, 377);
+            this.cbSin.Location = new System.Drawing.Point(65, 524);
             this.cbSin.Name = "cbSin";
             this.cbSin.Size = new System.Drawing.Size(15, 14);
             this.cbSin.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             this.cbA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbA.AutoSize = true;
-            this.cbA.Location = new System.Drawing.Point(65, 407);
+            this.cbA.Location = new System.Drawing.Point(65, 554);
             this.cbA.Name = "cbA";
             this.cbA.Size = new System.Drawing.Size(15, 14);
             this.cbA.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.cbB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbB.AutoSize = true;
-            this.cbB.Location = new System.Drawing.Point(65, 437);
+            this.cbB.Location = new System.Drawing.Point(65, 584);
             this.cbB.Name = "cbB";
             this.cbB.Size = new System.Drawing.Size(15, 14);
             this.cbB.TabIndex = 7;
@@ -132,7 +132,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1054, 629);
+            this.button2.Location = new System.Drawing.Point(1219, 776);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 23);
             this.button2.TabIndex = 8;
@@ -142,7 +142,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(699, 370);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(864, 517);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -155,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1319, 664);
+            this.ClientSize = new System.Drawing.Size(1484, 811);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cbB);
